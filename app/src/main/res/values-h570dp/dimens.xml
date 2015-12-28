@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 加单页适配 -->
+    <dimen name="add_order_line_margin">14dp</dimen>
+    <dimen name="add_order_keyboard_margin">10dp</dimen>
+    <dimen name="add_order_keyboard_height">60dp</dimen>
+</resources>
