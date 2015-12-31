@@ -10,7 +10,11 @@ import android.widget.TextView;
 import com.reminder.liuyang.reminder.R;
 import com.reminder.liuyang.reminder.utils.SystemUtils;
 
+import java.util.List;
+
+import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
@@ -43,7 +47,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             case R.id.btn_submit:
                 if(checkForm()) {
                     //showInnerDialog("正在登录...", Inner_RefreshDialog.LOADING);
-                    login();
+                    queryUser();
                 }
                 break;
             case R.id.tv_reset_password:
@@ -69,9 +73,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         return true;
     }
 
-    private void login(){
+    private void login(String username){
         BmobUser user = new BmobUser();
-        user.setEmail(et_user.getText().toString().trim());
+        user.setUsername(username);
         user.setPassword(et_password.getText().toString().trim());
         user.login(this, new SaveListener() {
             @Override
@@ -82,7 +86,22 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
             @Override
             public void onFailure(int code, String msg) {
-                SystemUtils.showToast(mContext, "登录失败:" + msg);
+                SystemUtils.showToast(mContext, "账号/密码错误" + msg);
+            }
+        });
+    }
+
+    private void queryUser(){
+        BmobQuery<BmobUser> query = new BmobQuery<>();
+        query.addWhereEqualTo("email", et_user.getText().toString().trim());
+        query.findObjects(this, new FindListener<BmobUser>() {
+            @Override
+            public void onSuccess(List<BmobUser> object) {
+                login(object.get(0).getUsername());
+            }
+            @Override
+            public void onError(int code, String msg) {
+                SystemUtils.showToast(mContext, "邮箱未注册:" + msg);
             }
         });
     }
