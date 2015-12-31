@@ -2,53 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/gson-2.3.1_7a47137135695f36b5c313a925d02cba9f6b329d.jar" />
-    </item>
-    <item
         jar="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/exploded-aar/com.github.lecho/hellocharts-library/1.5.3/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="31feb61a81927b6f873d2eb562e12e2487199c01">
         <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/com.github.lecho-hellocharts-library-1.5.3_cc6a074c0da52434ee8aa61dd6d48d0d590d3db0.jar" />
-    </item>
-    <item
-        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.umeng.analytics/analytics/5.6.4/76fed6d2233b958f0c1d589aa366785e0ab5c8f1/analytics-5.6.4.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="76fed6d2233b958f0c1d589aa366785e0ab5c8f1">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/analytics-5.6.4_b4f659e4c7a464fb7990698e85c04ca7cfaf8f32.jar" />
-    </item>
-    <item
-        jar="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/de.hdodenhof-circleimageview-1.3.0_8a07ea9cb2626f2dbac9f74a392a9bcc70ff9a45.jar" />
-    </item>
-    <item
-        jar="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/exploded-aar/de.keyboardsurfer.android.widget/crouton/1.8.4/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ef6e7d100ebc7feca53c3e2445b8e63ce4dea90c">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/de.keyboardsurfer.android.widget-crouton-1.8.4_26397660cb2c4fdf85f1e0e018417fbda9db5ea4.jar" />
-    </item>
-    <item
-        jar="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="698b40a43ecff2ebadc58b019ae236edd053fc67">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/com.github.castorflex.smoothprogressbar-library-1.0.0_f5b4060ba71b0613b26c8c8c54a276cb5a94fdb2.jar" />
-    </item>
-    <item
-        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.koushikdutta.async/androidasync/2.1.6/e3d5f6ab2003e31f2cf5ea61b4731a21e9517935/androidasync-2.1.6.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e3d5f6ab2003e31f2cf5ea61b4731a21e9517935">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/androidasync-2.1.6_f5764665008008bcbd77f68c0e5da9595c35921f.jar" />
     </item>
     <item
         jar="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/jars/libs/internal_impl-21.0.2.jar"
@@ -58,32 +16,11 @@
         <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.2_4c6f95c10fe4ccd42caf1677f585adb9efffc56b.jar" />
     </item>
     <item
-        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.2.0/c0b52915a48fa91b1b94a28d4a2997bac5f524df/okio-1.2.0.jar"
+        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="c0b52915a48fa91b1b94a28d4a2997bac5f524df">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/okio-1.2.0_d6816996c5c28dfd14c3ecfa243609d690d81612.jar" />
-    </item>
-    <item
-        jar="/Users/liuyang/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.2_0259e2606c4a96191a5dcea3471bec4e966f8839.jar" />
-    </item>
-    <item
-        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="90a3822c38ec8c996e84c16a3477ef632cbc87a3">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/commons-lang3-3.3.2_e7959f4efd61f71a7cc16c0548e0837de50e302b.jar" />
-    </item>
-    <item
-        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/a845a88238be0b5be9d238652c1bc0605ef91f52/android-async-http-1.4.6.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.6_de5b049340829d4b41b09a71c7bc639f12e1e8dd.jar" />
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/gson-2.3.1_7a47137135695f36b5c313a925d02cba9f6b329d.jar" />
     </item>
     <item
         jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.1.0/908e18674f895e3e1fa8f4a954b8c637a23d2801/core-3.1.0.jar"
@@ -93,11 +30,32 @@
         <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/core-3.1.0_76a68d2b91e11926ee00316ebbd6335bcaf07d14.jar" />
     </item>
     <item
-        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.2.0/959c454243581fdf730abfd4f4745441724bcf2c/okhttp-2.2.0.jar"
+        jar="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library/1.0.0/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="959c454243581fdf730abfd4f4745441724bcf2c">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/okhttp-2.2.0_62b5fc0035e811e8445e67c7e10b2ebac161d341.jar" />
+        sha1="698b40a43ecff2ebadc58b019ae236edd053fc67">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/com.github.castorflex.smoothprogressbar-library-1.0.0_f5b4060ba71b0613b26c8c8c54a276cb5a94fdb2.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/de.hdodenhof-circleimageview-1.3.0_8a07ea9cb2626f2dbac9f74a392a9bcc70ff9a45.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/okio-1.4.0_67476b13b656c353f68960c3aa5bc879784e7c2e.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.2_0259e2606c4a96191a5dcea3471bec4e966f8839.jar" />
     </item>
     <item
         jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.9.0/a681c044244d9fc375198588297a39ba78028423/retrofit-1.9.0.jar"
@@ -107,11 +65,11 @@
         <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/retrofit-1.9.0_5225484488630fd80d7606c2b2da2c9ae34b4209.jar" />
     </item>
     <item
-        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.koushikdutta.ion/ion/2.1.6/cd55ef3ba6d8b62838b658ba2507b019dffb3a08/ion-2.1.6.jar"
+        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/a845a88238be0b5be9d238652c1bc0605ef91f52/android-async-http-1.4.6.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="cd55ef3ba6d8b62838b658ba2507b019dffb3a08">
-        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/ion-2.1.6_df6572f1ea0f4f6416514d51046f8a8e1838c5d7.jar" />
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.6_de5b049340829d4b41b09a71c7bc639f12e1e8dd.jar" />
     </item>
     <item
         jar="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/jars/classes.jar"
@@ -119,6 +77,62 @@
         revision="21.1.2"
         sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
         <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-21.0.2_f680c7a508705da9529101cef142c5645f54826a.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.koushikdutta.async/androidasync/2.1.6/e3d5f6ab2003e31f2cf5ea61b4731a21e9517935/androidasync-2.1.6.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e3d5f6ab2003e31f2cf5ea61b4731a21e9517935">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/androidasync-2.1.6_f5764665008008bcbd77f68c0e5da9595c35921f.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/cn.bmob.android/bmob-sdk/3.4.5/44e559d18fd5a4826b0a4c0354308213e4f658a2/bmob-sdk-3.4.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="44e559d18fd5a4826b0a4c0354308213e4f658a2">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/bmob-sdk-3.4.5_114108a824de525a2a7d70b799d8b812eae93129.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/cn.bmob.android/bmob-push/0.6/db21ec99c2c7bf91c67bf80f5c5c49a92dd0562e/bmob-push-0.6.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="db21ec99c2c7bf91c67bf80f5c5c49a92dd0562e">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/bmob-push-0.6_173c9527a187641960c1c290e33aa486ad3956bf.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.koushikdutta.ion/ion/2.1.6/cd55ef3ba6d8b62838b658ba2507b019dffb3a08/ion-2.1.6.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cd55ef3ba6d8b62838b658ba2507b019dffb3a08">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/ion-2.1.6_df6572f1ea0f4f6416514d51046f8a8e1838c5d7.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="90a3822c38ec8c996e84c16a3477ef632cbc87a3">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/commons-lang3-3.3.2_e7959f4efd61f71a7cc16c0548e0837de50e302b.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/cn.bmob.android/bmob-sms/1.0.1/df9db564e2842696a68deca39b0186aebf3dc07c/bmob-sms-1.0.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="df9db564e2842696a68deca39b0186aebf3dc07c">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/bmob-sms-1.0.1_c8c6319e51dea6198a073ef255ddcd49cb02d086.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/okhttp-2.4.0_4e48aeb01c67bc6b89af64acca23f5e802a8d276.jar" />
+    </item>
+    <item
+        jar="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/exploded-aar/de.keyboardsurfer.android.widget/crouton/1.8.4/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ef6e7d100ebc7feca53c3e2445b8e63ce4dea90c">
+        <dex dex="/Users/liuyang/AndroidStudioProjects/reminder/app/build/intermediates/pre-dexed/debug/de.keyboardsurfer.android.widget-crouton-1.8.4_26397660cb2c4fdf85f1e0e018417fbda9db5ea4.jar" />
     </item>
 
 </items>

@@ -1,9 +1,9 @@
-package com.reminder.liuyang.reminder;
+package com.reminder.liuyang.reminder.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import com.reminder.liuyang.reminder.R;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
