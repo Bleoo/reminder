@@ -5,7 +5,7 @@
     style="@style/MrWind.TopBar">
 
     <TextView
-        android:id="@+id/btn_back"
+        android:id="@+id/back"
         style="@style/ActionBarBack" />
 
     <TextView

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_viewpagerindicator" default="compile.module.viewpagerindicator">
+  <dirname property="module.viewpagerindicator.basedir" file="${ant.file.module_viewpagerindicator}"/>
+  
+  <property name="module.jdk.home.viewpagerindicator" value="${jdk.home.android_api_19_platform}"/>
+  <property name="module.jdk.bin.viewpagerindicator" value="${jdk.bin.android_api_19_platform}"/>
+  <property name="module.jdk.classpath.viewpagerindicator" value="jdk.classpath.android_api_19_platform"/>
+  
+  <property name="compiler.args.viewpagerindicator" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="viewpagerindicator.output.dir" value="${module.viewpagerindicator.basedir}/build/classes/main"/>
+  <property name="viewpagerindicator.testoutput.dir" value="${module.viewpagerindicator.basedir}/build/classes/test"/>
+  
+  <path id="viewpagerindicator.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="viewpagerindicator.module.production.classpath">
+    <path refid="${module.jdk.classpath.viewpagerindicator}"/>
+    <pathelement location="${library.output.dir}"/>
+    <path refid="library.gradle:_commons-lang3-3.1.classpath"/>
+    <path refid="library.gradle:_android-support-v4.classpath"/>
+    <path refid="library.gradle:_com.lurencun.common-v1.5.6-with-src.classpath"/>
+    <path refid="library.gradle:_google-play-services.classpath"/>
+    <path refid="library.gradle:_alipay.classpath"/>
+    <path refid="library.gradle:_umeng-fb-v4.3.2.classpath"/>
+    <path refid="library.gradle:_ormlite-android-4.47.classpath"/>
+    <path refid="library.gradle:_ormlite-core-4.47.classpath"/>
+    <path refid="library.gradle:_crouton-1.8.1.classpath"/>
+    <path refid="library.gradle:_jsoup-1.7.2.classpath"/>
+    <path refid="library.gradle:_library-2.4.0.classpath"/>
+    <path refid="library.gradle:_ion-1.2.4.classpath"/>
+    <path refid="library.gradle:_androidasync-1.2.4.classpath"/>
+    <path refid="library.gradle:_gson-2.2.4.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_tencent_openapi_jar.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_libammsdk_jar.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_httpmime_4_2_4_jar.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_androidsdkcomponent_jar.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_fastjson_1_1_28_jar.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_android_viewbadger_jar.classpath"/>
+    <path refid="library.gradle:_core-3.1.0.classpath"/>
+  </path>
+  
+  <path id="viewpagerindicator.runtime.production.module.classpath">
+    <pathelement location="${viewpagerindicator.output.dir}"/>
+    <path refid="library.runtime.production.module.classpath"/>
+  </path>
+  
+  <path id="viewpagerindicator.module.classpath">
+    <path refid="${module.jdk.classpath.viewpagerindicator}"/>
+    <pathelement location="${viewpagerindicator.output.dir}"/>
+    <pathelement location="${library.testoutput.dir}"/>
+    <pathelement location="${library.output.dir}"/>
+    <path refid="library.gradle:_commons-lang3-3.1.classpath"/>
+    <path refid="library.gradle:_android-support-v4.classpath"/>
+    <path refid="library.gradle:_com.lurencun.common-v1.5.6-with-src.classpath"/>
+    <path refid="library.gradle:_crashlytics.classpath"/>
+    <path refid="library.gradle:_google-play-services.classpath"/>
+    <path refid="library.gradle:_alipay.classpath"/>
+    <path refid="library.gradle:_umeng-fb-v4.3.2.classpath"/>
+    <path refid="library.gradle:_ormlite-android-4.47.classpath"/>
+    <path refid="library.gradle:_ormlite-core-4.47.classpath"/>
+    <path refid="library.gradle:_crouton-1.8.1.classpath"/>
+    <path refid="library.gradle:_jsoup-1.7.2.classpath"/>
+    <path refid="library.gradle:_library-2.4.0.classpath"/>
+    <path refid="library.gradle:_ion-1.2.4.classpath"/>
+    <path refid="library.gradle:_androidasync-1.2.4.classpath"/>
+    <path refid="library.gradle:_gson-2.2.4.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_tencent_openapi_jar.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_libammsdk_jar.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_httpmime_4_2_4_jar.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_androidsdkcomponent_jar.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_fastjson_1_1_28_jar.classpath"/>
+    <path refid="library.gradle:__users_albert_work_gezbox_android_library_libs_android_viewbadger_jar.classpath"/>
+    <path refid="library.gradle:_core-3.1.0.classpath"/>
+  </path>
+  
+  <path id="viewpagerindicator.runtime.module.classpath">
+    <pathelement location="${viewpagerindicator.testoutput.dir}"/>
+    <pathelement location="${viewpagerindicator.output.dir}"/>
+    <path refid="library.runtime.module.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.viewpagerindicator">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.viewpagerindicator">
+    <patternset refid="excluded.from.module.viewpagerindicator"/>
+  </patternset>
+  
+  <path id="viewpagerindicator.module.sourcepath">
+    <dirset dir="${module.viewpagerindicator.basedir}">
+      <include name="src"/>
+      <include name="gen"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.viewpagerindicator" depends="compile.module.viewpagerindicator.production,compile.module.viewpagerindicator.tests" description="Compile module viewpagerindicator"/>
+  
+  <target name="compile.module.viewpagerindicator.production" depends="register.custom.compilers,compile.module.library" description="Compile module viewpagerindicator; production classes">
+    <mkdir dir="${viewpagerindicator.output.dir}"/>
+    <javac2 destdir="${viewpagerindicator.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.viewpagerindicator}/javac">
+      <compilerarg line="${compiler.args.viewpagerindicator}"/>
+      <bootclasspath refid="viewpagerindicator.module.bootclasspath"/>
+      <classpath refid="viewpagerindicator.module.production.classpath"/>
+      <src refid="viewpagerindicator.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.viewpagerindicator"/>
+    </javac2>
+    
+    <copy todir="${viewpagerindicator.output.dir}">
+      <fileset dir="${module.viewpagerindicator.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.viewpagerindicator.basedir}/gen">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.viewpagerindicator.tests" depends="register.custom.compilers,compile.module.viewpagerindicator.production" description="compile module viewpagerindicator; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.viewpagerindicator" description="cleanup module">
+    <delete dir="${viewpagerindicator.output.dir}"/>
+    <delete dir="${viewpagerindicator.testoutput.dir}"/>
+  </target>
+</project>

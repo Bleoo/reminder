@@ -94,15 +94,16 @@
     <orderEntry type="library" exported="" name="core-3.1.0" level="project" />
     <orderEntry type="library" exported="" name="retrofit-1.9.0" level="project" />
     <orderEntry type="library" exported="" name="crouton-1.8.4" level="project" />
-    <orderEntry type="library" exported="" name="android-async-http-1.4.6" level="project" />
     <orderEntry type="library" exported="" name="commons-lang3-3.3.2" level="project" />
+    <orderEntry type="library" exported="" name="android-async-http-1.4.6" level="project" />
     <orderEntry type="library" exported="" name="bmob-push-0.6" level="project" />
     <orderEntry type="library" exported="" name="gson-2.3.1" level="project" />
     <orderEntry type="library" exported="" name="okhttp-2.4.0" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-21.0.2" level="project" />
     <orderEntry type="library" exported="" name="androidasync-2.1.6" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-21.0.2" level="project" />
     <orderEntry type="library" exported="" name="hellocharts-library-1.5.3" level="project" />
     <orderEntry type="library" exported="" name="ion-2.1.6" level="project" />
     <orderEntry type="library" exported="" name="okio-1.4.0" level="project" />
+    <orderEntry type="module" module-name="viewpagerindicator" exported="" />
   </component>
 </module>

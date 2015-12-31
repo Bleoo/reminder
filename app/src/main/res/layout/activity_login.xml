@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_actionbar" />
+
+    <com.reminder.liuyang.reminder.EmailAutoCompleteTextView
+        android:id="@+id/et_user"
+        style="@style/LoginEdit"
+        android:layout_marginLeft="@dimen/medium"
+        android:layout_marginRight="@dimen/medium"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="@dimen/padding_normal"
+        android:hint="请输入邮箱/手机号" />
+
+    <View
+        style="@style/MrWind.Divider.Horizontal"
+        android:layout_marginLeft="@dimen/medium" />
+
+    <EditText
+        android:id="@+id/et_password"
+        style="@style/LoginEdit"
+        android:layout_marginLeft="@dimen/medium"
+        android:layout_marginRight="@dimen/medium"
+        android:layout_marginTop="20dp"
+        android:hint="请输入密码"
+        android:inputType="textPassword" />
+
+    <View
+        style="@style/MrWind.Divider.Horizontal"
+        android:layout_marginLeft="@dimen/medium"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/ButtonRed"
+        android:layout_marginLeft="@dimen/medium"
+        android:layout_marginRight="@dimen/medium"
+        android:layout_marginTop="30dp"
+        android:text="立即登录" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_regist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/medium"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:text="注册账号" />
+
+        <TextView
+            android:id="@+id/tv_reset_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/medium"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:text="找回密码" />
+
+    </RelativeLayout>
+
+</LinearLayout>

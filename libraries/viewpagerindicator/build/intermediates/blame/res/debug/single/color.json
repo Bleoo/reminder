@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/liuyang/AndroidStudioProjects/reminder/libraries/viewpagerindicator/build/intermediates/res/merged/debug/color/vpi__dark_theme.xml",
+        "source": "/Users/liuyang/AndroidStudioProjects/reminder/libraries/viewpagerindicator/res/color/vpi__dark_theme.xml"
+    },
+    {
+        "merged": "/Users/liuyang/AndroidStudioProjects/reminder/libraries/viewpagerindicator/build/intermediates/res/merged/debug/color/vpi__light_theme.xml",
+        "source": "/Users/liuyang/AndroidStudioProjects/reminder/libraries/viewpagerindicator/res/color/vpi__light_theme.xml"
+    }
+]
