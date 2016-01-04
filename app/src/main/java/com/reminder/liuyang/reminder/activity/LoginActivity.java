@@ -43,7 +43,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
         switch (view.getId()) {
             case  R.id.back:
-            onBackPressed();
+                finish();
+                break;
             case R.id.btn_submit:
                 if(checkForm()) {
                     //showInnerDialog("正在登录...", Inner_RefreshDialog.LOADING);
@@ -66,7 +67,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
         String password = et_password.getText().toString();
         if (TextUtils.isEmpty(password)) {
-            SystemUtils.showToast(getActivity(), "请输入密码");
+            SystemUtils.showToast(mContext, "请输入密码");
             return false;
         }
 

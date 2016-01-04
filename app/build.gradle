@@ -1,4 +1,15 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.droidtitan.lintcleaner'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.droidtitan:lint-cleaner-plugin:0.3.0'
+    }
+}
 
 android {
     compileSdkVersion 21
