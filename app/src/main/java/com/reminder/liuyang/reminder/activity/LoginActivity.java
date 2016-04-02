@@ -1,6 +1,5 @@
 package com.reminder.liuyang.reminder.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -61,7 +60,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private boolean checkForm() {
         String user = et_user.getText().toString();
         if (TextUtils.isEmpty(user)) {
-            SystemUtils.showToast(mContext, "请输入邮箱/手机号");
+            SystemUtils.showToast(mContext, "请输入邮箱");
             return false;
         }
 
@@ -81,7 +80,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         user.login(this, new SaveListener() {
             @Override
             public void onSuccess() {
-                SystemUtils.showToast(mContext, "登录成功");
                 jumpToActivity(MainActivity.class);
             }
 

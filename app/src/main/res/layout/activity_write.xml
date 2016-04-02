@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/title_bar"
+        android:background="@drawable/title_bar_background">
+
+        <TextView
+            android:id="@+id/tv_back_list"
+            style="@style/title_bar_left_btn"
+            android:background="@drawable/selector_back_btn"
+            android:gravity="center_vertical"
+            android:text="@string/main_list"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            style="@style/title_bar_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/selector_delete_btn"
+            android:visibility="invisible"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_save"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_empty_btn" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/stat_done"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_write_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/detail_note_paper_line_botttom"
+        android:gravity="center_vertical"
+        android:textColor="@color/light_khaki"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/detail_note_paper_line_botttom"
+        android:lineSpacingMultiplier="1.2"
+        android:textCursorDrawable="@drawable/shape_edit_text_cursor"
+        android:gravity="top"
+        android:textSize="18sp"
+        android:textColor="@color/khaki"/>
+
+</LinearLayout>

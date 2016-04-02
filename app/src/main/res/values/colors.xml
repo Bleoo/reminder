@@ -183,4 +183,8 @@
     <color name="misson_status">#EA4A52</color>
 
     <color name="invite_title_tv">#ffC18787</color>
+
+    <!-- 自定义 -->
+    <color name="light_khaki">#BAA893</color>
+    <color name="khaki">#6F4432</color>
 </resources>

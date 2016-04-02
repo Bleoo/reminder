@@ -1,4 +1,4 @@
-package com.reminder.liuyang.reminder;
+package com.reminder.liuyang.reminder.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.reminder.liuyang.reminder.R;
 
 /**
  * Created by liuyang on 15/12/31.

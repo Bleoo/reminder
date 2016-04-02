@@ -1035,7 +1035,7 @@
         <item name="android:background">@color/divider_light</item>
     </style>
 
-    <style name="MrWind.Divider.KEYBOARD">
+    <style name="MrWind.Divider.KEYBOARD">a
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.5dp</item>
         <item name="android:background">@color/divider</item>
@@ -1168,6 +1168,37 @@
     <style name="popwindow">
         <item name="android:windowEnterAnimation">@anim/popwindow_fade_in</item>
         <item name="android:windowExitAnimation">@anim/popwindow_fade_out</item>
+    </style>
+
+    <!-- 自定义 -->
+    <style name="title_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="title_bar_left_btn">
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="title_bar_right_btn">
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="title_bar_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24dp</item>
     </style>
 
 </resources>

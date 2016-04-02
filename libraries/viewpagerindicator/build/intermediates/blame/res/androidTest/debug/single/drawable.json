@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/liuyang/AndroidStudioProjects/reminder/libraries/viewpagerindicator/build/intermediates/res/merged/androidTest/debug/drawable/vpi__tab_indicator.xml",
-        "source": "/Users/liuyang/AndroidStudioProjects/reminder/libraries/viewpagerindicator/build/intermediates/bundles/debug/res/drawable/vpi__tab_indicator.xml"
+        "merged": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\vpi__tab_indicator.xml",
+        "source": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\bundles\\debug\\res\\drawable\\vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\vpi__tab_indicator.xml",
+        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\bundles\\debug\\res\\drawable\\vpi__tab_indicator.xml"
     }
 ]

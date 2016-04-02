@@ -33,19 +33,6 @@ public class LeoApplication extends Application implements Thread.UncaughtExcept
 
     @Override
     public void uncaughtException(Thread thread, Throwable throwable) {
-
-        //int crashCount = mSharedPrefsUtil.getIntSP(Constant.SharedPrefrence.APP_CRASH_COUNT, 0);
-
-        //清除数据
-//        if (crashCount > 2) {
-//            mSharedPrefsUtil.clearAll();
-//            ACache.get(this).clear();
-//        } else {
-//            mSharedPrefsUtil.setIntSP(Constant.SharedPrefrence.APP_CRASH_COUNT, crashCount);
-//            crashCount++;
-//        }
-
         System.exit(0);
-
     }
 }

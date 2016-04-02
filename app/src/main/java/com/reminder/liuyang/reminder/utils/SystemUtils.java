@@ -26,21 +26,15 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by albert on 8/8/14.
  */
 public class SystemUtils {
-    /**
-     * 显示Toast
-     *
-     * @param context
-     * @param message
-     */
-    public static void showToast(Context context, String message) {
-        SystemUtils.showToast(context, message, Gravity.BOTTOM);
-    }
 
     /**
      * 显示Toast
@@ -50,8 +44,9 @@ public class SystemUtils {
      * @param gravity
      */
     private static Toast toast;
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm", Locale.CHINA);
 
-    public static void showToast(Context context, String message, int gravity) {
+    public static void showToast(Context context, String message) {
         if (context == null || TextUtils.isEmpty(message)) {
             return;
         }
@@ -62,8 +57,12 @@ public class SystemUtils {
             toast.setText(message);
         }
 
-        toast.setGravity(gravity, 0, 0);
         toast.show();
+    }
+
+    public static String formatTime(long timeMillis){
+        Date date = new Date(timeMillis);
+        return dateFormat.format(date);
     }
 
 //    /**
@@ -365,24 +364,6 @@ public class SystemUtils {
             }
         }
         return false;
-    }
-
-    /**
-     * 订单号每4位空,“XXXX XXXX XXXX”
-     * @param str
-     * @return
-     */
-    public static String insertTabToString(String str) {
-
-        StringBuffer result = new StringBuffer();
-
-        for (int i = 0; i < str.length(); i++) {
-            result.append(str.charAt(i));
-            if (i != 0 && i % 4 == 3) {
-                result.append(' ');    //每4个字符增加一个空格
-            }
-        }
-        return result.toString();
     }
 
 }

@@ -1,3 +1,11 @@
+# general
+*~
+*.swp
+.DS_Store
+
+# java
+*.class
+
 # android
 .idea
 *.iml

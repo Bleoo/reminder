@@ -2,5 +2,7 @@
 <resources>
 
     <string name="app_name">Mini备忘录</string>
+    <string name="reminder">备忘录</string>
+    <string name="main_list">列表</string>
 
 </resources>

@@ -7,14 +7,14 @@
 
     <include layout="@layout/common_actionbar" />
 
-    <com.reminder.liuyang.reminder.EmailAutoCompleteTextView
+    <com.reminder.liuyang.reminder.view.EmailAutoCompleteTextView
         android:id="@+id/et_user"
         style="@style/LoginEdit"
         android:layout_marginLeft="@dimen/medium"
         android:layout_marginRight="@dimen/medium"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/large"
         android:paddingBottom="@dimen/padding_normal"
-        android:hint="请输入邮箱/手机号" />
+        android:hint="请输入邮箱" />
 
     <View
         style="@style/MrWind.Divider.Horizontal"
@@ -25,14 +25,14 @@
         style="@style/LoginEdit"
         android:layout_marginLeft="@dimen/medium"
         android:layout_marginRight="@dimen/medium"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/large"
+        android:paddingBottom="@dimen/padding_normal"
         android:hint="请输入密码"
         android:inputType="textPassword" />
 
     <View
         style="@style/MrWind.Divider.Horizontal"
-        android:layout_marginLeft="@dimen/medium"
-        android:layout_marginTop="10dp" />
+        android:layout_marginLeft="@dimen/medium" />
 
     <Button
         android:id="@+id/btn_submit"
