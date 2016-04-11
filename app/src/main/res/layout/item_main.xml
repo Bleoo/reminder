@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/light_khaki"
         android:singleLine="true"
-        android:textSize="@dimen/text_normal"/>
+        android:textSize="14dp"/>
 
     <TextView
         android:id="@+id/tv_item_describe"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_small"
         android:singleLine="true"
-        android:textSize="@dimen/text_large"
+        android:textSize="18dp"
         android:textColor="@color/khaki"/>
 
 </LinearLayout>

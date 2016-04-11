@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/title_bar"
+        android:background="@drawable/setting_titlebar_bg">
+
+        <TextView
+            android:id="@+id/rl_back"
+            style="@style/title_bar_left_btn"
+            android:background="@drawable/selector_setting_titlebar_btn"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title_bar_title"
+            android:text="@string/setting" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_cloud_services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_setting_item_bg_single">
+
+                <TextView
+                    style="@style/setting_item_text"
+                    android:text="@string/cloud_services"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_setting_item_next"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_cloud_sync"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_setting_item_bg_single">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@drawable/selector_setting_item_text"
+                    android:textSize="18sp"
+                    android:text="@string/cloud_sync"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_app_encrypt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_setting_item_bg_top">
+
+                <TextView
+                    style="@style/setting_item_text"
+                    android:text="@string/app_encrypt"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_setting_item_next"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_share_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/selector_setting_item_bg_middle">
+
+                <TextView
+                    style="@style/setting_item_text"
+                    android:text="@string/share_app"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_check_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/selector_setting_item_bg_bottom">
+
+                <TextView
+                    style="@style/setting_item_text"
+                    android:text="@string/check_update"/>
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:textColor="@drawable/selector_setting_blue_text"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

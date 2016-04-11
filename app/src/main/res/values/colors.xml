@@ -187,4 +187,5 @@
     <!-- 自定义 -->
     <color name="light_khaki">#BAA893</color>
     <color name="khaki">#6F4432</color>
+    <color name="royal_blue">#6584CD</color>
 </resources>

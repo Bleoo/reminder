@@ -46,7 +46,6 @@ dependencies {
     compile 'cn.bmob.android:bmob-push:0.6'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.squareup.okio:okio:1.4.0'
-    compile 'cn.bmob.android:bmob-sms:1.0.1'
     compile 'org.apache.commons:commons-lang3:3.3.2'
     compile('de.keyboardsurfer.android.widget:crouton:1.8.4@aar') {
         exclude group: 'com.google.android', module: 'support-v4'

@@ -77,7 +77,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(mContext, WriteActivity.class);
-                intent.putExtra("remind", (Serializable) mData.get(position));
+                intent.putExtra("remind", mData.get(position));
                 startActivity(intent);
             }
         });
@@ -85,10 +85,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()) {
             case R.id.rl_writing:
-                Intent intent = new Intent(this, WriteActivity.class);
+                intent = new Intent(this, WriteActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.rl_setting:
+                intent = new Intent(this, SettingActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 

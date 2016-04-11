@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/title_bar"
+        android:background="@drawable/setting_titlebar_bg">
+
+        <TextView
+            android:id="@+id/rl_back"
+            style="@style/title_bar_left_btn"
+            android:background="@drawable/selector_common_titlebar_back_btn"
+            android:gravity="center_vertical"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title_bar_title"
+            android:text="@string/sign_up" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/common_edit_text_top">
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/iv_sign_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/common_error_sign"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/common_edit_text_bottom"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/et_phone_smscode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@null"
+            android:hint="@string/phone_smscode"
+            android:inputType="number"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_get_smscode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_common_blue_btn"
+        android:gravity="center"
+        android:text="@string/get_phone_smscode"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_common_blue_btn"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_smscode_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#AA000000"
+        android:textSize="14sp"
+        android:text="@string/smscode_tip"
+        android:visibility="invisible"/>
+
+</LinearLayout>

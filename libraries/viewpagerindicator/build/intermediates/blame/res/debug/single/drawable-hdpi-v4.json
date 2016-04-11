@@ -1,19 +1,23 @@
 [
     {
-        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
-        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_unselected_focused_holo.9.png"
+        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
+        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_selected_pressed_holo.9.png"
     },
     {
-        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_unselected_holo.9.png",
-        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_unselected_holo.9.png"
+        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_selected_focused_holo.9.png",
+        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_selected_focused_holo.9.png"
     },
     {
         "merged": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_selected_holo.9.png",
         "source": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_selected_holo.9.png"
     },
     {
-        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
-        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_selected_pressed_holo.9.png"
+        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_unselected_holo.9.png",
+        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_unselected_holo.9.png"
+    },
+    {
+        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
+        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_unselected_focused_holo.9.png"
     },
     {
         "merged": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
@@ -28,16 +32,8 @@
         "source": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_selected_pressed_holo.9.png"
     },
     {
-        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_selected_focused_holo.9.png",
-        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_selected_focused_holo.9.png"
-    },
-    {
         "merged": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
         "source": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_unselected_focused_holo.9.png"
-    },
-    {
-        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
-        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_unselected_pressed_holo.9.png"
     },
     {
         "merged": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_selected_focused_holo.9.png",
@@ -46,5 +42,9 @@
     {
         "merged": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_unselected_holo.9.png",
         "source": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_unselected_holo.9.png"
+    },
+    {
+        "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
+        "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\drawable-hdpi\\vpi__tab_unselected_pressed_holo.9.png"
     }
 ]

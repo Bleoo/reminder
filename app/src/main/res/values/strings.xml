@@ -4,5 +4,24 @@
     <string name="app_name">Mini备忘录</string>
     <string name="reminder">备忘录</string>
     <string name="main_list">列表</string>
+    <string name="setting">设置</string>
+    <string name="back">返回</string>
+    <string name="cloud_services">云服务</string>
+    <string name="cloud_sync">同步云端便签</string>
+    <string name="app_encrypt">应用加密</string>
+    <string name="share_app">分享此应用给好友</string>
+    <string name="check_update">检查更新</string>
+    <string name="sign_up">注册新账户</string>
+    <string name="sign_in">登陆已有账户</string>
+    <string name="enable_password">启用密码</string>
+    <string name="change_password">更改密码</string>
+    <string name="phone_number">手机号码</string>
+    <string name="phone_smscode">手机验证码</string>
+    <string name="get_phone_smscode">获取手机验证码</string>
+    <string name="resend_phone_smscode">重新发送手机验证码</string>
+    <string name="next">下一步</string>
+
+    <string name="cloud_services_tip">登录云服务，您可以将便签的数据与云服务同步。</string>
+    <string name="smscode_tip">已经向您的手机发送了验证码，如果您没有收到，可以在一分钟之后点击重新发送手机验证码。</string>
 
 </resources>

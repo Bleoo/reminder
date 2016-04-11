@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\release\\color\\vpi__light_theme.xml",
-        "source": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\res\\color\\vpi__light_theme.xml"
-    },
-    {
         "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\release\\color\\vpi__dark_theme.xml",
         "source": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\res\\color\\vpi__dark_theme.xml"
+    },
+    {
+        "merged": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\release\\color\\vpi__light_theme.xml",
+        "source": "D:\\Android\\project\\reminder\\libraries\\viewpagerindicator\\res\\color\\vpi__light_theme.xml"
     },
     {
         "merged": "D:\\Users\\liuyang\\AndroidStudioProjects\\reminder\\libraries\\viewpagerindicator\\build\\intermediates\\res\\merged\\release\\color\\vpi__light_theme.xml",
