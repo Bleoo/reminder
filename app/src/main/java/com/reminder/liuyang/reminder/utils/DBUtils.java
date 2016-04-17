@@ -34,6 +34,25 @@ public class DBUtils {
         return database.insert(TB_REMAINDER, null, cValue);
     }
 
+    public boolean batchSave(List<Remind> list){
+        SQLiteDatabase database = dbHelper.getWritableDatabase();
+        database.beginTransaction();
+        try {
+            for(Remind remind : list){
+                ContentValues cValue = new ContentValues();
+                cValue.put(COL_CONTENT, remind.content);
+                cValue.put(COL_WRITETIME, remind.writeTime);
+                database.insert(TB_REMAINDER, null, cValue);
+            }
+            database.setTransactionSuccessful();
+        }catch (Exception e){
+            return false;
+        } finally {
+            database.endTransaction();
+            return true;
+        }
+    }
+
     public int delete(Remind remind) {
         SQLiteDatabase database = dbHelper.getWritableDatabase();
         String whereClause = COL_ID + "=?";

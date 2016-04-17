@@ -1,5 +1,6 @@
 package com.reminder.liuyang.reminder.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.Editable;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.reminder.liuyang.reminder.R;
+import com.reminder.liuyang.reminder.utils.Constant;
 import com.reminder.liuyang.reminder.utils.SystemUtils;
 
 import cn.bmob.v3.BmobSMS;
@@ -29,8 +31,6 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
     private TextView tv_next;
     private View iv_sign_error;
     private View tv_smscode_tip;
-
-    private final String telReg = "^[1][0-9]{10}$";
 
     private CountDownTimer countDownTimer;
     private int countDownSecond = 60;
@@ -110,7 +110,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
                 sendSMSCode();
                 break;
             case R.id.tv_next:
-
+                verifySmsCode();
                 break;
         }
     }
@@ -124,7 +124,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
 
     private boolean checkPhoneNumber() {
         String tel = et_phone_number.getText().toString();
-        return tel.matches(telReg);
+        return tel.matches(Constant.telReg);
     }
 
     private boolean checkPhoneSMSCode() {
@@ -134,20 +134,12 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
 
     private void setSendBtnClickable(boolean clickable) {
         tv_get_smscode.setClickable(clickable);
-        if (clickable) {
-            tv_get_smscode.setAlpha(1);
-        } else {
-            tv_get_smscode.setAlpha(0.5f);
-        }
+        tv_get_smscode.setAlpha(clickable ? 1 : 0.5f);
     }
 
     private void setNextBtnClickable(boolean clickable) {
         tv_next.setClickable(clickable);
-        if (clickable) {
-            tv_next.setAlpha(1);
-        } else {
-            tv_next.setAlpha(0.5f);
-        }
+        tv_next.setAlpha(clickable ? 1 : 0.5f);
     }
 
     private void startCountdown() {
@@ -182,25 +174,25 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
                 if (ex == null) {
                     startCountdown();
                 } else {
-                    SystemUtils.showToast(mContext, "发送失败!请检查网络");
+                    SystemUtils.showToast(mContext, "获取失败!请检查网络");
                 }
             }
         });
     }
 
     private void verifySmsCode(){
-        BmobSMS.verifySmsCode(this, et_phone_number.getText().toString(), et_phone_smscode.getText().toString(), new VerifySMSCodeListener() {
+        final String phoneNumber = et_phone_number.getText().toString();
+        BmobSMS.verifySmsCode(this, phoneNumber, et_phone_smscode.getText().toString(), new VerifySMSCodeListener() {
 
             @Override
             public void done(BmobException ex) {
                 if(ex==null){//短信验证码已验证成功
-
+                    Intent intent = new Intent(mContext, SetPasswordActivity.class);
+                    intent.putExtra("phone_number", phoneNumber);
+                    startActivity(intent);
+                    finish();
                 }else{
-                    if(ex.getErrorCode() == 9010){
-                        SystemUtils.showToast(mContext, "网络超时");
-                    } else {
-                        SystemUtils.showToast(mContext, "验证码错误");
-                    }
+                    SystemUtils.showToast(mContext, "验证码错误");
                 }
             }
         });

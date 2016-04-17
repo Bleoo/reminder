@@ -10,6 +10,8 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.Point;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.CountDownTimer;
 import android.os.Parcelable;
@@ -17,7 +19,6 @@ import android.os.PowerManager;
 import android.os.Vibrator;
 import android.text.TextUtils;
 import android.view.Display;
-import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -345,10 +346,6 @@ public class SystemUtils {
         }
     }
 
-    public interface OnLoadFailListener {
-        void loadFail();
-    }
-
     /**
      * 判断Activity是否正在运行
      *
@@ -391,6 +388,29 @@ public class SystemUtils {
         }
 
         return pi;
+    }
+
+    /**
+     * 检测当的网络（WLAN、3G/2G）状态
+     * @param context Context
+     * @return true 表示网络可用
+     */
+    public static boolean isNetworkAvailable(Context context) {
+        ConnectivityManager connectivity = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo info = connectivity.getActiveNetworkInfo();
+            if (info != null && info.isConnected())
+            {
+                // 当前网络是连接的
+                if (info.getState() == NetworkInfo.State.CONNECTED)
+                {
+                    // 当前所连接的网络可用
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
 }

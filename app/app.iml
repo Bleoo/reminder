@@ -92,8 +92,8 @@
     <orderEntry type="library" exported="" name="crouton-1.8.4" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.1.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.1.1" level="project" />
-    <orderEntry type="library" exported="" name="commons-lang3-3.3.2" level="project" />
     <orderEntry type="library" exported="" name="android-async-http-1.4.6" level="project" />
+    <orderEntry type="library" exported="" name="commons-lang3-3.3.2" level="project" />
     <orderEntry type="library" exported="" name="okio-1.4.0" level="project" />
     <orderEntry type="library" exported="" name="bmob-push-0.6" level="project" />
     <orderEntry type="module" module-name="viewpagerindicator" exported="" />

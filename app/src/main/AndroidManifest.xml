@@ -42,10 +42,16 @@
             android:screenOrientation="portrait"/>
 
         <activity android:name=".activity.CloudServicesActicity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
-
         <activity android:name=".activity.SignUpActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.SignInActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.SetPasswordActivity"
             android:screenOrientation="portrait"/>
 
     </application>

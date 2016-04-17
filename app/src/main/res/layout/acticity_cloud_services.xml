@@ -25,8 +25,10 @@
     </RelativeLayout>
 
     <ScrollView
+        android:id="@+id/sv_un_sign_in"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,10 +72,130 @@
                 android:gravity="center"
                 android:textColor="#FFF"
                 android:textSize="20sp"
-                android:text="@string/sign_in"/>
+                android:text="@string/sign_in_account"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sv_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:background="@drawable/setting_item_up_normal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/common_default_header"/>
+
+                <TextView
+                    android:id="@+id/tv_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/setting_item_middle_normal">
+
+                <TextView
+                    style="@style/setting_item_text"
+                    android:text="@string/cloud_remind_number"/>
+
+                <TextView
+                    android:id="@+id/tv_cloud_remind_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="18sp"
+                    android:textColor="@color/royal_blue"
+                    android:text="@string/loading"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/setting_item_down_normal">
+
+                <TextView
+                    style="@style/setting_item_text"
+                    android:text="@string/local_remind_number"/>
+
+                <TextView
+                    android:id="@+id/tv_local_remind_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="18sp"
+                    android:textColor="@color/royal_blue"
+                    android:text="@string/loading"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_cloud_to_local"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_setting_item_bg_top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="18sp"
+                    android:text="@string/cloud_to_local"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_local_to_cloud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/selector_setting_item_bg_bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="18sp"
+                    android:text="@string/local_to_cloud"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_sign_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_common_btn_red"
+                android:gravity="center"
+                android:text="@string/sign_out"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
 
         </LinearLayout>
-
     </ScrollView>
 
 </LinearLayout>
