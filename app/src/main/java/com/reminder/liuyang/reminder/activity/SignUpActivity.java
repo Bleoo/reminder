@@ -124,7 +124,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
 
     private boolean checkPhoneNumber() {
         String tel = et_phone_number.getText().toString();
-        return tel.matches(Constant.telReg);
+        return tel.matches(Constant.TEL_REG);
     }
 
     private boolean checkPhoneSMSCode() {

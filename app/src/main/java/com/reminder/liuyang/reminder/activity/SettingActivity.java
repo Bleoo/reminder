@@ -45,6 +45,8 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
             case R.id.rl_cloud_sync:
                 break;
             case R.id.rl_app_encrypt:
+                intent = new Intent(this, AppEncryptActivity.class);
+                startActivity(intent);
                 break;
             case R.id.rl_share_app:
                 break;

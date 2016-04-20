@@ -1,6 +1,7 @@
 package com.reminder.liuyang.reminder.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -58,6 +59,12 @@ public class WriteActivity extends BaseActivity implements View.OnClickListener 
         } else {
             tv_write_time.setText(SystemUtils.formatTime(System.currentTimeMillis()));
             setWriteStatus(EDITING);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    SystemUtils.toggleSoftInput(mContext, et_content, true);
+                }
+            }, 300);
         }
     }
 
@@ -67,6 +74,7 @@ public class WriteActivity extends BaseActivity implements View.OnClickListener 
             case R.id.rl_save:
                 String content = et_content.getText().toString();
                 if(content.isEmpty()) {
+                    SystemUtils.toggleSoftInput(mContext, et_content, false);
                     finish();
                     return;
                 }

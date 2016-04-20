@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/note_background"
+    android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
     <RelativeLayout
@@ -21,15 +21,14 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_setting"/>
+                android:src="@drawable/ic_setting" />
 
         </RelativeLayout>
 
         <TextView
             android:id="@+id/tv_title"
             style="@style/title_bar_title"
-            android:text="@string/reminder">
-        </TextView>
+            android:text="@string/reminder"></TextView>
 
         <RelativeLayout
             android:id="@+id/rl_writing"
@@ -41,16 +40,28 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:scaleType="center"
-                android:src="@drawable/ic_writing"/>
+                android:src="@drawable/ic_writing" />
 
         </RelativeLayout>
 
     </RelativeLayout>
 
-    <com.baoyz.swipemenulistview.SwipeMenuListView
-        android:id="@+id/smlv_main"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:listSelector="@android:color/transparent"/>
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/note_empty" />
+
+        <com.baoyz.swipemenulistview.SwipeMenuListView
+            android:id="@+id/smlv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/transparent" />
+
+    </FrameLayout>
 
 </LinearLayout>

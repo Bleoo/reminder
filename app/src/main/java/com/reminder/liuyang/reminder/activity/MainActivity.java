@@ -15,16 +15,16 @@ import com.reminder.liuyang.reminder.adapter.MainAdapter;
 import com.reminder.liuyang.reminder.bean.Remind;
 import com.reminder.liuyang.reminder.utils.DBUtils;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private SwipeMenuListView smlv_main;
+    private View iv_empty;
+
     private List<Remind> mData;
     private MainAdapter adapter;
-
     private DBUtils dbUtils;
 
     @Override
@@ -32,13 +32,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        smlv_main = (SwipeMenuListView) findViewById(R.id.smlv_main);
+        iv_empty = findViewById(R.id.iv_empty);
+
         findViewById(R.id.rl_setting).setOnClickListener(this);
         findViewById(R.id.rl_writing).setOnClickListener(this);
-        smlv_main = (SwipeMenuListView) findViewById(R.id.smlv_main);
 
         dbUtils = new DBUtils(this);
-        mData = new ArrayList<>();
-        mData.addAll(dbUtils.query());
+        mData = dbUtils.query();
+        if(mData == null) {
+            mData = new ArrayList<>();
+        }
         adapter = new MainAdapter(mData, mContext);
         smlv_main.setAdapter(adapter);
 
@@ -64,6 +68,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                         if (dbUtils.delete(mData.get(position)) > 0) {
                             mData.remove(position);
                             adapter.notifyDataSetChanged();
+                            showViewByData();
                         }
                         break;
                 }
@@ -81,6 +86,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(intent);
             }
         });
+
+        showViewByData();
+    }
+
+    private void showViewByData(){
+        if (mData.size() == 0) {
+            iv_empty.setVisibility(View.VISIBLE);
+        } else {
+            iv_empty.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
@@ -104,5 +119,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mData.clear();
         mData.addAll(dbUtils.query());
         adapter.notifyDataSetChanged();
+        showViewByData();
     }
 }

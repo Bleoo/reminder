@@ -34,18 +34,18 @@ public class DBUtils {
         return database.insert(TB_REMAINDER, null, cValue);
     }
 
-    public boolean batchSave(List<Remind> list){
+    public boolean batchSave(List<Remind> list) {
         SQLiteDatabase database = dbHelper.getWritableDatabase();
         database.beginTransaction();
         try {
-            for(Remind remind : list){
+            for (Remind remind : list) {
                 ContentValues cValue = new ContentValues();
                 cValue.put(COL_CONTENT, remind.content);
                 cValue.put(COL_WRITETIME, remind.writeTime);
                 database.insert(TB_REMAINDER, null, cValue);
             }
             database.setTransactionSuccessful();
-        }catch (Exception e){
+        } catch (Exception e) {
             return false;
         } finally {
             database.endTransaction();
@@ -58,6 +58,21 @@ public class DBUtils {
         String whereClause = COL_ID + "=?";
         String[] whereArgs = {String.valueOf(remind.id)};
         return database.delete(TB_REMAINDER, whereClause, whereArgs);
+    }
+
+    public boolean batchDelete() {
+        SQLiteDatabase database = dbHelper.getWritableDatabase();
+        database.beginTransaction();
+        try {
+            database.execSQL("delete from " + TB_REMAINDER + ";"); //清空数据
+            database.execSQL("update sqlite_sequence SET seq = 0 where name ='" + TB_REMAINDER + "';"); //自增长ID为0
+            database.setTransactionSuccessful();
+        } catch (Exception e) {
+            return false;
+        } finally {
+            database.endTransaction();
+            return true;
+        }
     }
 
     public int update(Remind remind) {
@@ -86,6 +101,13 @@ public class DBUtils {
             }
         }
         return remindList;
+    }
+
+    public long getCount() {
+        SQLiteDatabase database = dbHelper.getWritableDatabase();
+        Cursor cursor = database.rawQuery("select count(*) from " + TB_REMAINDER + ";", null);
+        cursor.moveToFirst();
+        return cursor.getLong(0);
     }
 
 }

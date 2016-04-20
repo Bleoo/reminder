@@ -35,6 +35,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         iv_sign_error = findViewById(R.id.iv_sign_error);
         tv_sign_in = findViewById(R.id.tv_sign_in);
 
+        findViewById(R.id.rl_back).setOnClickListener(this);
         tv_sign_in.setOnClickListener(this);
 
         et_phone_number.setOnFocusChangeListener(this);
@@ -80,6 +81,9 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.rl_back:
+                finish();
+                break;
             case R.id.tv_sign_in:
                 signIn();
                 break;
@@ -95,7 +99,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
 
     private boolean checkPhoneNumber() {
         String tel = et_phone_number.getText().toString();
-        return tel.matches(Constant.telReg);
+        return tel.matches(Constant.TEL_REG);
     }
 
     private boolean checkPassword() {

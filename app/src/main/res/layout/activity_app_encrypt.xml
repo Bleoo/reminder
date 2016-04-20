@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/activity_bg">
+
+    <RelativeLayout
+        style="@style/title_bar"
+        android:background="@drawable/setting_titlebar_bg">
+
+        <TextView
+            android:id="@+id/rl_back"
+            style="@style/title_bar_left_btn"
+            android:background="@drawable/selector_common_titlebar_back_btn"
+            android:gravity="center_vertical"
+            android:text="@string/setting"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title_bar_title"
+            android:text="@string/app_encrypt" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_enable_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_setting_item_bg_top">
+
+        <TextView
+            android:id="@+id/tv_enable_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@drawable/selector_setting_item_text"
+            android:textSize="18sp"
+            android:text="@string/enable_password"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/selector_setting_item_bg_bottom">
+
+        <TextView
+            android:id="@+id/tv_change_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@drawable/selector_setting_item_text"
+            android:textSize="18sp"
+            android:text="@string/change_password"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#AA000000"
+        android:textSize="14sp"
+        android:text="@string/encrypt_tip"/>
+
+</LinearLayout>

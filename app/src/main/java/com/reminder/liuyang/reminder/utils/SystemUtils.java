@@ -2,6 +2,7 @@ package com.reminder.liuyang.reminder.utils;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.Dialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -19,10 +20,18 @@ import android.os.PowerManager;
 import android.os.Vibrator;
 import android.text.TextUtils;
 import android.view.Display;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.reminder.liuyang.reminder.R;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -408,6 +417,22 @@ public class SystemUtils {
                     // 当前所连接的网络可用
                     return true;
                 }
+            }
+        }
+        return false;
+    }
+
+    public static boolean isAppOnForeground(Context context){
+        ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> appProcessInfos = activityManager.getRunningAppProcesses();
+        if(appProcessInfos == null){
+            return false;
+        }
+        String packageName = context.getPackageName();
+        for(ActivityManager.RunningAppProcessInfo appProcessInfo : appProcessInfos){
+            if(appProcessInfo.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND
+                    && appProcessInfo.processName.equals(packageName)){
+                return true;
             }
         }
         return false;

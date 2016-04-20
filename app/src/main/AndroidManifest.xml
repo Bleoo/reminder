@@ -54,6 +54,12 @@
         <activity android:name=".activity.SetPasswordActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".activity.AppEncryptActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.EncryptPasswordActivity"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>
