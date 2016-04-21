@@ -9,4 +9,5 @@ public class Constant {
     public static final String TEL_REG = "^[1][0-9]{10}$";
     public static final String ENCRYPT_ENABLE = "ENCRYPT_ENABLE";
     public static final String ENCRYPT_PASSWORD = "ENCRYPT_PASSWORD";
+    public static final String APP_AUTHOR = "LeoLiu";
 }

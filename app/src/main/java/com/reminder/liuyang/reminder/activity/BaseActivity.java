@@ -1,13 +1,11 @@
 package com.reminder.liuyang.reminder.activity;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.reminder.liuyang.reminder.LeoApplication;
-import com.reminder.liuyang.reminder.view.LoadingProgressDialog;
 
 /**
  * Created by liuyang on 15/12/29.
@@ -24,8 +22,11 @@ public class BaseActivity extends Activity {
 
     @Override
     protected void onResume() {
-        if(!LeoApplication.getInstance().isForegrund){
-            startActivity(new Intent(this, AppEncryptActivity.class));
+        LeoApplication.getInstance().getEncryptInfo();
+        if(!LeoApplication.getInstance().isForegrund && LeoApplication.getInstance().encryptEnable){
+            Intent intent = new Intent(this, DecryptPasswordActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
         super.onResume();
     }

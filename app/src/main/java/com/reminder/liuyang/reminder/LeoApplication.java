@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.reminder.liuyang.reminder.utils.Constant;
 
@@ -45,7 +46,7 @@ public class LeoApplication extends Application implements Thread.UncaughtExcept
 
     }
 
-    private void getEncryptInfo() {
+    public void getEncryptInfo() {
         encryptEnable = sharedPreferences.getBoolean(Constant.ENCRYPT_ENABLE, false);
         if(encryptEnable){
             encryptPassword = sharedPreferences.getString(Constant.ENCRYPT_PASSWORD, encryptPassword);

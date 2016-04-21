@@ -9,6 +9,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.TextView;
 
+import com.reminder.liuyang.reminder.LeoApplication;
 import com.reminder.liuyang.reminder.R;
 import com.reminder.liuyang.reminder.bean.Remind;
 import com.reminder.liuyang.reminder.utils.DBUtils;
@@ -160,7 +161,8 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
     }
 
     private void signOut(){
-        BmobUser.logOut(this);   //清除缓存用户对象
+        BmobUser.logOut(this);   // 清除缓存用户对象
+        LeoApplication.getInstance().setEncryptInfo(false, null);  // 关闭加密
         showViewByStatus();
     }
 
@@ -168,7 +170,7 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
         BmobUser user = BmobUser.getCurrentUser(this);
         BmobQuery<Remind> query = new BmobQuery<>();
         query.addWhereEqualTo("user", user); // 标记所属用户
-        query.order("-writeTime"); // 按创建时间倒序
+        query.order("writeTime"); // 按创建时间正序
         query.findObjects(this, new FindListener<Remind>() {
             @Override
             public void onSuccess(final List<Remind> list) {
@@ -177,6 +179,7 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
                     public void run() {
                         if (dbUtils.batchDelete() && dbUtils.batchSave(list)) {
                             Message.obtain(handler, SUCCESS_CLOUD_TO_LOCAL).sendToTarget();
+                            localDataCount();
                         } else {
                             Message.obtain(handler, FAIL_CLOUD_TO_LOCAL).sendToTarget();
                         }
@@ -243,6 +246,8 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
                     SystemUtils.showToast(mContext, getString(R.string.sync_fail));
                 }
             });
+        } else {
+            cloudSaveBatch();
         }
     }
 

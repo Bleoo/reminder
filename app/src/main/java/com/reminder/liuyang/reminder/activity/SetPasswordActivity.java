@@ -117,11 +117,12 @@ public class SetPasswordActivity extends BaseActivity implements View.OnClickLis
     }
 
     private void signUp() {
+        String password = et_password.getText().toString();
         BmobUser bu = new BmobUser();
         bu.setUsername(phoneNumber);
         bu.setMobilePhoneNumber(phoneNumber);
         bu.setMobilePhoneNumberVerified(true);
-        bu.setPassword(et_password.getText().toString());
+        bu.setPassword(SystemUtils.getPasswordMD5(password));
         //注意：不能用save方法进行注册
         bu.signUp(this, new SaveListener() {
             @Override
@@ -138,9 +139,10 @@ public class SetPasswordActivity extends BaseActivity implements View.OnClickLis
     }
 
     private void signIn(){
+        String password = et_password.getText().toString();
         BmobUser bu2 = new BmobUser();
         bu2.setUsername(phoneNumber);
-        bu2.setPassword(et_password.getText().toString());
+        bu2.setPassword(SystemUtils.getPasswordMD5(password));
         bu2.login(this, new SaveListener() {
             @Override
             public void onSuccess() {

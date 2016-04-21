@@ -2,7 +2,6 @@ package com.reminder.liuyang.reminder.utils;
 
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.app.Dialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -20,23 +19,16 @@ import android.os.PowerManager;
 import android.os.Vibrator;
 import android.text.TextUtils;
 import android.view.Display;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.reminder.liuyang.reminder.R;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -71,7 +63,7 @@ public class SystemUtils {
         toast.show();
     }
 
-    public static String formatTime(long timeMillis){
+    public static String formatTime(long timeMillis) {
         Date date = new Date(timeMillis);
         return dateFormat.format(date);
     }
@@ -401,6 +393,7 @@ public class SystemUtils {
 
     /**
      * 检测当的网络（WLAN、3G/2G）状态
+     *
      * @param context Context
      * @return true 表示网络可用
      */
@@ -409,11 +402,9 @@ public class SystemUtils {
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivity != null) {
             NetworkInfo info = connectivity.getActiveNetworkInfo();
-            if (info != null && info.isConnected())
-            {
+            if (info != null && info.isConnected()) {
                 // 当前网络是连接的
-                if (info.getState() == NetworkInfo.State.CONNECTED)
-                {
+                if (info.getState() == NetworkInfo.State.CONNECTED) {
                     // 当前所连接的网络可用
                     return true;
                 }
@@ -422,20 +413,29 @@ public class SystemUtils {
         return false;
     }
 
-    public static boolean isAppOnForeground(Context context){
-        ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        List<ActivityManager.RunningAppProcessInfo> appProcessInfos = activityManager.getRunningAppProcesses();
-        if(appProcessInfos == null){
-            return false;
-        }
-        String packageName = context.getPackageName();
-        for(ActivityManager.RunningAppProcessInfo appProcessInfo : appProcessInfos){
-            if(appProcessInfo.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND
-                    && appProcessInfo.processName.equals(packageName)){
-                return true;
+    public static String getMD5(String info) {
+        try {
+            MessageDigest md5 = MessageDigest.getInstance("MD5");
+            md5.update(info.getBytes("UTF-8"));
+            byte[] encryption = md5.digest();
+
+            StringBuffer strBuf = new StringBuffer();
+            for (int i = 0; i < encryption.length; i++) {
+                if (Integer.toHexString(0xff & encryption[i]).length() == 1) {
+                    strBuf.append("0").append(Integer.toHexString(0xff & encryption[i]));
+                } else {
+                    strBuf.append(Integer.toHexString(0xff & encryption[i]));
+                }
             }
+
+            return strBuf.toString();
+        } catch (Exception e) {
+            return "";
         }
-        return false;
+    }
+
+    public static String getPasswordMD5(String password) {
+        return getMD5(getMD5(password) + Constant.APP_AUTHOR);
     }
 
 }

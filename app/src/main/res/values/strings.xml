@@ -46,12 +46,19 @@
     <string name="current_password">当前密码</string>
     <string name="input_new_password">输入新密码</string>
     <string name="new_password">新密码</string>
+    <string name="cancel">取消</string>
+    <string name="please_enter_password">请输入密码</string>
+    <string name="password_error">密码错误</string>
+    <string name="password_not_match">密码不匹配</string>
+    <string name="set_success">设置成功</string>
+    <string name="share_to">分享至</string>
 
     <string name="cloud_services_tip">登录云服务，您可以将便签的数据与云服务同步。</string>
     <string name="smscode_tip">已经向您的手机发送了验证码，如果您没有收到，可以在一分钟之后点击重新发送手机验证码。</string>
     <string name="encrypt_tip">启用密码功能后将会要求您每次启用便签时输入密码。为了保证您的数据安全，此功能需要登录云服务账户后才可以使用。</string>
     <string name="password_reg_tip">密码只能包含数字或字母。</string>
     <string name="password_diff_tip">两次密码不一致。</string>
+    <string name="share_app_tip">【Mini备忘录】这款APP真的不错哦~小伙伴们快来应用商店下载吧\n来自【Mini备忘录】</string>
 
     <string name="error_202">用户名已经存在</string>
     <string name="error_205">没有找到此用户名的用户</string>

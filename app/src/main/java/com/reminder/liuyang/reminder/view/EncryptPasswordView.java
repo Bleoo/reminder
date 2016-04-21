@@ -36,4 +36,39 @@ public class EncryptPasswordView extends LinearLayout {
         iv_password_4 = (ImageView) view.findViewById(R.id.iv_password_4);
     }
 
+    public void refreshViewByLength(int length){
+        switch (length){
+            case 0:
+                iv_password_1.setImageResource(R.drawable.easy_password_dot_empty);
+                iv_password_2.setImageResource(R.drawable.easy_password_dot_empty);
+                iv_password_3.setImageResource(R.drawable.easy_password_dot_empty);
+                iv_password_4.setImageResource(R.drawable.easy_password_dot_empty);
+                break;
+            case 1:
+                iv_password_1.setImageResource(R.drawable.easy_password_dot_full);
+                iv_password_2.setImageResource(R.drawable.easy_password_dot_empty);
+                iv_password_3.setImageResource(R.drawable.easy_password_dot_empty);
+                iv_password_4.setImageResource(R.drawable.easy_password_dot_empty);
+                break;
+            case 2:
+                iv_password_1.setImageResource(R.drawable.easy_password_dot_full);
+                iv_password_2.setImageResource(R.drawable.easy_password_dot_full);
+                iv_password_3.setImageResource(R.drawable.easy_password_dot_empty);
+                iv_password_4.setImageResource(R.drawable.easy_password_dot_empty);
+                break;
+            case 3:
+                iv_password_1.setImageResource(R.drawable.easy_password_dot_full);
+                iv_password_2.setImageResource(R.drawable.easy_password_dot_full);
+                iv_password_3.setImageResource(R.drawable.easy_password_dot_full);
+                iv_password_4.setImageResource(R.drawable.easy_password_dot_empty);
+                break;
+            case 4:
+                iv_password_1.setImageResource(R.drawable.easy_password_dot_full);
+                iv_password_2.setImageResource(R.drawable.easy_password_dot_full);
+                iv_password_3.setImageResource(R.drawable.easy_password_dot_full);
+                iv_password_4.setImageResource(R.drawable.easy_password_dot_full);
+                break;
+        }
+    }
+
 }

@@ -113,9 +113,10 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     }
 
     private void signIn(){
+        String password = et_password.getText().toString();
         BmobUser bu2 = new BmobUser();
         bu2.setUsername(et_phone_number.getText().toString());
-        bu2.setPassword(et_password.getText().toString());
+        bu2.setPassword(SystemUtils.getPasswordMD5(password));
         bu2.login(this, new SaveListener() {
             @Override
             public void onSuccess() {

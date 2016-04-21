@@ -8,30 +8,39 @@ import android.widget.TextView;
 import com.reminder.liuyang.reminder.R;
 import com.reminder.liuyang.reminder.utils.SystemUtils;
 
+import cn.bmob.v3.BmobUser;
+
 /**
  * Created by Administrator on 2016/4/2.
  */
 public class SettingActivity extends BaseActivity implements View.OnClickListener {
 
-    private View rl_cloud_sync;
-    private TextView tv_version;
+    private TextView tv_username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-        rl_cloud_sync = findViewById(R.id.rl_cloud_sync);
-        tv_version = (TextView) findViewById(R.id.tv_version);
+        tv_username = (TextView) findViewById(R.id.tv_username);
 
         findViewById(R.id.rl_back).setOnClickListener(this);
         findViewById(R.id.rl_cloud_services).setOnClickListener(this);
-        rl_cloud_sync.setOnClickListener(this);
         findViewById(R.id.rl_app_encrypt).setOnClickListener(this);
         findViewById(R.id.rl_share_app).setOnClickListener(this);
         findViewById(R.id.rl_check_update).setOnClickListener(this);
 
-        tv_version.setText("V" + SystemUtils.getVersionName(this));
+        ((TextView) findViewById(R.id.tv_version)).setText("V" + SystemUtils.getVersionName(this));
+        setUsernameText();
+    }
+
+    private void setUsernameText() {
+        BmobUser currentUser = BmobUser.getCurrentUser(this);
+        if(currentUser != null){
+            tv_username.setText(currentUser.getMobilePhoneNumber());
+        } else {
+            tv_username.setText("");
+        }
     }
 
     @Override
@@ -42,13 +51,12 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
                 intent = new Intent(this, CloudServicesActicity.class);
                 startActivity(intent);
                 break;
-            case R.id.rl_cloud_sync:
-                break;
             case R.id.rl_app_encrypt:
                 intent = new Intent(this, AppEncryptActivity.class);
                 startActivity(intent);
                 break;
             case R.id.rl_share_app:
+                shareApp();
                 break;
             case R.id.rl_check_update:
                 break;
@@ -56,5 +64,20 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
                 finish();
                 break;
         }
+    }
+
+    private void shareApp() {
+        Intent shareIntent = new Intent();
+        shareIntent.setType("text/plain");
+        shareIntent.setAction(Intent.ACTION_SEND);
+        shareIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_app_tip));
+        shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(Intent.createChooser(shareIntent, getString(R.string.share_to)));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setUsernameText();
     }
 }
