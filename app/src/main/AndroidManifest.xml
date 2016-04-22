@@ -53,6 +53,10 @@
         <activity android:name=".activity.DecryptPasswordActivity"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name="cn.bmob.v3.update.UpdateDialogActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

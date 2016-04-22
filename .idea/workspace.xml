@@ -75,174 +75,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b82a58e4-914a-4ae4-9215-df8d154447bf" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\java\com\reminder\liuyang\reminder\activity\LoginActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\java\com\reminder\liuyang\reminder\view\EmailAutoCompleteTextView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\anim\popwindow_fade_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\anim\popwindow_fade_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\anim\selectsheet_push_bottom_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\anim\selectsheet_push_bottom_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\anim\selectsheet_push_down_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\anim\selectsheet_push_down_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\anim\slide_in_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\anim\slide_in_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\anim\slide_out_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\anim\slide_out_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\color\segmented_control_text.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\color\selector_main_tab_text.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\color\selector_order_tab_text.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\color\selector_team_tab_text.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\color\selector_text_grey_light_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\color\selector_text_light_white.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\color\selector_text_red_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\color\selector_text_white.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\color\selector_text_white_grey.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\bg.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\bg_button_red.9.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\bg_left.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\bg_mrwind_start.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\bg_nav_end_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\bg_nav_end_unselected.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\bg_tap.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\btn_delivery_record_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\btn_delivery_record_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\btn_route_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\btn_route_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\custom_tab_indicator_divider.9.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\dotline.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_back.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_back_small.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_back_small_pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_camera_red_samll_pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_camera_red_small.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_check_grey.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_check_red.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_circle_grey_small.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_circle_red.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_circle_unchecked_bold.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_fast_scroll.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_gallery_red_small.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_gallery_red_small_pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_loading0.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_loading1.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_loading2.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_loading3.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_loading4.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_loading5.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_loading6.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_loading7.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_loading8.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_loading9.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_nav_msg.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_nav_msg_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_point_pay_nopress.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_point_pay_press.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_procurator_false.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_procurator_true.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_selected.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_top_loading0.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_top_loading1.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_top_loading2.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_top_loading3.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_top_loading4.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_top_loading5.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_top_loading6.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_top_loading7.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_top_loading8.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\ic_top_loading9.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status1.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status10.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status11.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status2.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status3.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status4.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status5.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status6.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status7.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status8.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progress_dialog_status9.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progressbar_indeterminate_holo1.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progressbar_indeterminate_holo2.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progressbar_indeterminate_holo3.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progressbar_indeterminate_holo4.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progressbar_indeterminate_holo5.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progressbar_indeterminate_holo6.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progressbar_indeterminate_holo7.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\progressbar_indeterminate_holo8.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\reload_normal_btn_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\reload_press_btn_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi\right_arrow_middle.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\bg_radiogroup_red.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\bg_radiogroup_white.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\custom_tab_indicator_divider.9.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\main_tab_bg.9.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\pic_data.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\pic_fenxin.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\pic_misson.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\pic_penson.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\pic_un_data.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\pic_un_fenxin.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\pic_un_misson.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\pic_un_penson.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi\wind_main_tab_bg.9.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_border_grey.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_border_grey_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_border_grey_middle_with_grey_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_border_grey_pressed.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_border_red.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_border_red_pressed.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_order_tab.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_order_tab_selected.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_order_tab_unselected.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_team_tab.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_team_tab_selected.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\bg_team_tab_unselected.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\ic_dash_line.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\ic_dot_grey.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\ic_rectangle_grey.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\ic_rectangle_red.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\ic_square.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\progress_indeterminate_horizontal_holo.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\segmented_control_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_common_button_black.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_common_button_black_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_common_button_blue.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_common_button_grey_border.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_common_button_red.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_common_button_red_border.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_common_button_red_border_with_state.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_common_button_red_with_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_common_button_red_with_state.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_ic_back_small.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_press_mask.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_send_code_button_red.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_transparent_black.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\selector_white_grey.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\drawable\tab_divider.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\layout\activity_login.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\layout\common_actionbar.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\layout\register_auto_complete_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\values-h570dp\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\values-w820dp\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\values\attrs.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\values\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\values\styles_viewpagerindicator.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\app\src\main\res\values\theme.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Android\project\reminder\libraries\libraries.iml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/SettingActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/SettingActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/proguard-rules.pro" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="reminder.iws" />
@@ -271,11 +114,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="SettingActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/SettingActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="64" column="54" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.44265231">
-              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -620,6 +473,11 @@
                 <option name="name" value="installDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Installs the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="jarDebugClasses" />
               </ExternalTaskPojo>
@@ -738,16 +596,6 @@
                 <option name="description" value="Prepare com.baoyz.swipemenulistview:library:1.3.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComBaoyzSwipemenulistviewLibrary130Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.github.lecho:hellocharts-library:1.5.3" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGithubLechoHellochartsLibrary153Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare de.keyboardsurfer.android.widget:crouton:1.8.4" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareDeKeyboardsurferAndroidWidgetCrouton184Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -908,7 +756,15 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="validateMyConfigSigning" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="zipalignDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="zipalignRelease" />
               </ExternalTaskPojo>
             </list>
           </value>
@@ -1182,6 +1038,11 @@
                 <option name="name" value="installDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Installs the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="installRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="jarDebugClasses" />
               </ExternalTaskPojo>
@@ -1305,16 +1166,6 @@
                 <option name="description" value="Prepare com.baoyz.swipemenulistview:library:1.3.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareComBaoyzSwipemenulistviewLibrary130Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.github.lecho:hellocharts-library:1.5.3" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGithubLechoHellochartsLibrary153Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare de.keyboardsurfer.android.widget:crouton:1.8.4" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareDeKeyboardsurferAndroidWidgetCrouton184Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1490,7 +1341,15 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="validateMyConfigSigning" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="zipalignDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="zipalignRelease" />
               </ExternalTaskPojo>
             </list>
           </value>
@@ -1500,7 +1359,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="$PROJECT_DIR$" value="5804569221000" />
-        <entry key="D:\Android\project\reminder" value="4376561806614" />
+        <entry key="D:\Android\project\reminder" value="4376671595002" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1716,19 +1575,12 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.bmob.android/bmob-sdk/3.4.5/44e559d18fd5a4826b0a4c0354308213e4f658a2/bmob-sdk-3.4.5.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.bmob.android/bmob-sdk/3.4.6/41f54bb2846705eea0de5df48ddbcba378bd54e5/bmob-sdk-3.4.6.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.bmob.android/bmob-push/0.6/db21ec99c2c7bf91c67bf80f5c5c49a92dd0562e/bmob-push-0.6.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/4436e0e369eb429adb10ad5269bb3f4f119423b7/okhttp-2.4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/aae2090b931bd43cd3e23202074e7bf8300ce7d5/okio-1.4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.keyboardsurfer.android.widget/crouton/1.8.4/9642aaeaf001419e10c420d7aae5aeabc99aa441/crouton-1.8.4-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.keyboardsurfer.android.widget/crouton/1.8.4/d46ead9ba553fbd5e4dc27745f492ea085e802ca/crouton-1.8.4.aar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/3599ba755b1e9162955c5a031a7d5447cf8c93f/android-async-http-1.4.6-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/a845a88238be0b5be9d238652c1bc0605ef91f52/android-async-http-1.4.6.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.lecho/hellocharts-library/1.5.3/75837324a2f75c439cb417dc0c0ac8f8a5ca3e2b/hellocharts-library-1.5.3-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.lecho/hellocharts-library/1.5.3/fe2346105b87e2d15ccde94f7b24b5eab8cecf10/hellocharts-library-1.5.3.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.baoyz.swipemenulistview/library/1.3.0/4d7abb7fbfc955f1b54aff3a9410d9bbf8cd98b3/library-1.3.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.baoyz.swipemenulistview/library/1.3.0/5757dcec8dfe0f1fef4c77336e76ed06c190fd20/library-1.3.0.aar" />
                             <option value="$PROJECT_DIR$/../../sdk/extras/android/m2repository/com/android/support/support-v4/22.1.1/support-v4-22.1.1.aar" />
@@ -2283,7 +2135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/acticity_cloud_services.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/SignUpActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/utils/BmobUtils.java" />
@@ -2327,13 +2178,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/SignInActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/CloudServicesActicity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/SettingActivity.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/SettingActivity.java" />
+        <option value="$PROJECT_DIR$/app/proguard-rules.pro" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
   </component>
@@ -2474,7 +2326,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reminder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2507,6 +2363,10 @@
               <option name="myItemId" value="reminder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2523,6 +2383,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reminder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reminder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2550,7 +2428,7 @@
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="83b10368" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_S_API_17" />
-    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
@@ -2562,19 +2440,13 @@
       <recent name="com.reminder.liuyang.reminder.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi" />
-      <recent name="D:\Android\project\reminder\app\src\main\res\drawable" />
+      <recent name="D:\Android\project\reminder\app" />
+      <recent name="D:\Android\project\reminder\app\src\main\res\values" />
       <recent name="D:\Android\project\reminder\app\src\main\res\layout" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/values" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="D:\Android\project\reminder\app\src\main\res\drawable" />
+      <recent name="D:\Android\project\reminder\app\src\main\res" />
     </key>
     <key name="android.template.packageName">
-      <recent name="com.reminder.liuyang.reminder" />
-    </key>
-    <key name="android.template.parentActivityClass">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.reminder.liuyang.reminder" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -2582,6 +2454,12 @@
       <recent name="D:\Android\project\reminder\app\src\main\res\drawable-xhdpi" />
       <recent name="D:\Android\project\reminder\app\src\main\res\drawable-xxhdpi" />
       <recent name="$PROJECT_DIR$/libraries" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.reminder.liuyang.reminder" />
+    </key>
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -2810,49 +2688,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_write.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31628788">
-          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31628788">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_app_encrypt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.532197">
-          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
-          <folding>
-            <element signature="e#2184#2209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_empty_btn.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/sm_keyboard_0_highlight.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2965,6 +2800,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="18412" column="23" selection-start-line="18412" selection-start-column="23" selection-end-line="18412" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3019,6 +2855,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45519713">
           <caret line="106" column="71" selection-start-line="106" selection-start-column="71" selection-end-line="106" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3033,6 +2870,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3055,6 +2893,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="124" column="59" selection-start-line="124" selection-start-column="59" selection-end-line="124" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3074,13 +2913,6 @@
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/SettingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0340502">
-          <caret line="78" column="25" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/CloudServicesActicity.java">
@@ -3119,14 +2951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22739726">
           <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11469534">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -3209,10 +3033,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/../../sdk/platforms/android-21/data/res/values/themes.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3509434">
+          <caret line="633" column="17" selection-start-line="633" selection-start-column="17" selection-end-line="633" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.bmob.android/bmob-sdk/3.4.5/44e559d18fd5a4826b0a4c0354308213e4f658a2/bmob-sdk-3.4.5.jar!/cn/bmob/v3/update/UpdateDialogActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.29433963">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/bmob_update_button_cancel_bg_focused.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/bmob_common_strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44265231">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/bmob_update_dialog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17992425">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.bmob.android/bmob-sdk/3.4.5/44e559d18fd5a4826b0a4c0354308213e4f658a2/bmob-sdk-3.4.5.jar!/cn/bmob/v3/update/BmobUpdateAgent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16792452">
+          <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62544805">
+          <caret line="56" column="65" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/reminder/liuyang/reminder/activity/SettingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="54" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6594982">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44265231">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding />
         </state>
       </provider>

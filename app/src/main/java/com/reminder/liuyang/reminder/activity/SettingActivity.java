@@ -9,6 +9,7 @@ import com.reminder.liuyang.reminder.R;
 import com.reminder.liuyang.reminder.utils.SystemUtils;
 
 import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.update.BmobUpdateAgent;
 
 /**
  * Created by Administrator on 2016/4/2.
@@ -59,6 +60,9 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
                 shareApp();
                 break;
             case R.id.rl_check_update:
+                //初始化建表操作，一旦AppVersion表在后台创建成功，建议屏蔽或删除此方法，否则会生成多行记录。
+                //BmobUpdateAgent.initAppVersion(this);
+                BmobUpdateAgent.forceUpdate(mContext);
                 break;
             case R.id.rl_back:
                 finish();
