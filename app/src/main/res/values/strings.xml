@@ -7,7 +7,6 @@
     <string name="setting">设置</string>
     <string name="back">返回</string>
     <string name="cloud_services">云服务</string>
-    <string name="cloud_sync">同步云端便签</string>
     <string name="app_encrypt">应用加密</string>
     <string name="share_app">分享此应用给好友</string>
     <string name="check_update">检查更新</string>
@@ -30,7 +29,6 @@
     <string name="local_remind_number">本地便签数</string>
     <string name="loading">获取中</string>
     <string name="load_fail">获取失败</string>
-    <string name="no_network">无网络</string>
     <string name="cloud_to_local">从云端同步至本地</string>
     <string name="local_to_cloud">从本地同步至云端</string>
     <string name="sign_out">退出登录</string>

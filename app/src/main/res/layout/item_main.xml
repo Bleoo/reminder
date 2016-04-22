@@ -11,15 +11,15 @@
         android:layout_height="wrap_content"
         android:textColor="@color/light_khaki"
         android:singleLine="true"
-        android:textSize="14dp"/>
+        android:textSize="14sp"/>
 
     <TextView
         android:id="@+id/tv_item_describe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_small"
+        android:layout_marginTop="8sp"
         android:singleLine="true"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="@color/khaki"/>
 
 </LinearLayout>
