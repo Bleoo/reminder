@@ -54,10 +54,10 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
         findViewById(R.id.btn_0).setOnClickListener(this);
         findViewById(R.id.btn_del).setOnClickListener(this);
 
-        if(getIntent().hasExtra("intent")){
+        if (getIntent().hasExtra("intent")) {
             intentMode = getIntent().getIntExtra("intent", 0);
         }
-        switch (intentMode){
+        switch (intentMode) {
             case ENABLE_PASSWORD:
                 tv_title.setText(getString(R.string.set_password));
                 tv_password_tip.setText(getString(R.string.set_password));
@@ -74,7 +74,7 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_1:
             case R.id.btn_2:
             case R.id.btn_3:
@@ -98,14 +98,15 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
 
     /**
      * 根据不同编辑状态对相应的密码字符串进行追加
+     *
      * @param tag
      */
     private void append(String tag) {
-        switch (editingStatus){
+        switch (editingStatus) {
             case EDITING_NEW_PASSWORD:
                 newPassword += tag;
                 passwordView.refreshViewByLength(newPassword.length());
-                if(newPassword.length() == 4){
+                if (newPassword.length() == 4) {
                     tv_password_tip.setText(getString(R.string.confirm_password));
                     passwordView.refreshViewByLength(0);
                     editingStatus = EDITING_CONFIRM_PASSWORD;
@@ -114,8 +115,8 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
             case EDITING_CONFIRM_PASSWORD:
                 confirmPassword += tag;
                 passwordView.refreshViewByLength(confirmPassword.length());
-                if(confirmPassword.length() == 4){
-                    if(confirmPassword.equals(newPassword)) {
+                if (confirmPassword.length() == 4) {
+                    if (confirmPassword.equals(newPassword)) {
                         LeoApplication.getInstance().setEncryptInfo(true, confirmPassword);
                         SystemUtils.showToast(mContext, getString(R.string.set_success));
                         finish();
@@ -129,12 +130,12 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
             case EDITING_CURRENT_PASSWORD:
                 currentPassword += tag;
                 passwordView.refreshViewByLength(currentPassword.length());
-                if(currentPassword.length() == 4){
-                    if(currentPassword.equals(LeoApplication.getInstance().encryptPassword)) {
-                        if(intentMode == DISABLE_PASSWORD){
+                if (currentPassword.length() == 4) {
+                    if (currentPassword.equals(LeoApplication.getInstance().encryptPassword)) {
+                        if (intentMode == DISABLE_PASSWORD) {
                             LeoApplication.getInstance().setEncryptInfo(false, null);
                             finish();
-                        } else if(intentMode == CHANGE_PASSWORD){
+                        } else if (intentMode == CHANGE_PASSWORD) {
                             tv_title.setText(getString(R.string.input_new_password));
                             tv_password_tip.setText(getString(R.string.new_password));
                             passwordView.refreshViewByLength(0);
@@ -153,8 +154,8 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
     /**
      * 根据不同编辑状态对相应的密码字符串进行退格
      */
-    private void backspace(){
-        switch (editingStatus){
+    private void backspace() {
+        switch (editingStatus) {
             case EDITING_NEW_PASSWORD:
                 if (newPassword.length() > 0) {
                     newPassword = newPassword.substring(0, newPassword.length() - 1);

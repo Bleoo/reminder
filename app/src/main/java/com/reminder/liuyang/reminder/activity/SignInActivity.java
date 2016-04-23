@@ -80,7 +80,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.rl_back:
                 finish();
                 break;
@@ -112,7 +112,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         tv_sign_in.setAlpha(clickable ? 1 : 0.5f);
     }
 
-    private void signIn(){
+    private void signIn() {
         String password = et_password.getText().toString();
         BmobUser bu2 = new BmobUser();
         bu2.setUsername(et_phone_number.getText().toString());
@@ -127,7 +127,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
             @Override
             public void onFailure(int code, String msg) {
                 String errorMsg = BmobUtils.getErrorMsg(code, mContext);
-                if(errorMsg.equals(getString(R.string.error_default))){
+                if (errorMsg.equals(getString(R.string.error_default))) {
                     errorMsg = getString(R.string.sign_in_fail);
                 }
                 SystemUtils.showToast(mContext, errorMsg);

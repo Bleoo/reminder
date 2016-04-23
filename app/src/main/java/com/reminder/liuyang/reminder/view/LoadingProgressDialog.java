@@ -25,8 +25,10 @@ public class LoadingProgressDialog extends Dialog {
 
     public LoadingProgressDialog(Context context, int theme, String message) {
         super(context, theme);
-        this.setContentView(R.layout.dialog_loading);
-        this.getWindow().getAttributes().gravity = Gravity.CENTER;
+        setContentView(R.layout.dialog_loading);
+        getWindow().getAttributes().gravity = Gravity.CENTER;
+        setCanceledOnTouchOutside(false);
+        setCancelable(false);
 
         iv_loadImage = (ImageView) findViewById(R.id.iv_loadImage);
         rotateAnimation = AnimationUtils.loadAnimation(context, R.anim.loading);

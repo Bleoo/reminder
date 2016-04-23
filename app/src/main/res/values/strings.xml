@@ -50,6 +50,8 @@
     <string name="password_not_match">密码不匹配</string>
     <string name="set_success">设置成功</string>
     <string name="share_to">分享至</string>
+    <string name="confirm_delete_this_reminder">确认要删除此条便签？</string>
+    <string name="delete">删除</string>
 
     <string name="cloud_services_tip">登录云服务，您可以将便签的数据与云服务同步。</string>
     <string name="smscode_tip">已经向您的手机发送了验证码，如果您没有收到，可以在一分钟之后点击重新发送手机验证码。</string>

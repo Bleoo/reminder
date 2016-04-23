@@ -1,6 +1,5 @@
 package com.reminder.liuyang.reminder.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -61,7 +60,7 @@ public class AppEncryptActivity extends BaseActivity implements View.OnClickList
                 finish();
                 break;
             case R.id.rl_enable_password:
-                if(currentUser == null){
+                if (currentUser == null) {
                     SystemUtils.showToast(mContext, "请先登录");
                     return;
                 }
@@ -74,7 +73,7 @@ public class AppEncryptActivity extends BaseActivity implements View.OnClickList
                 startActivity(intent);
                 break;
             case R.id.rl_change_password:
-                if(LeoApplication.getInstance().encryptEnable && currentUser != null) {
+                if (LeoApplication.getInstance().encryptEnable && currentUser != null) {
                     intent = new Intent(this, EncryptPasswordActivity.class);
                     intent.putExtra("intent", EncryptPasswordActivity.CHANGE_PASSWORD);
                     startActivity(intent);

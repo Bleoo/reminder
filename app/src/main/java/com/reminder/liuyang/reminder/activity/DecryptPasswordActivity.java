@@ -41,7 +41,7 @@ public class DecryptPasswordActivity extends Activity implements View.OnClickLis
         findViewById(R.id.btn_del).setOnClickListener(this);
 
         findViewById(R.id.rl_title_bar).setVisibility(View.GONE);
-        ((TextView)findViewById(R.id.tv_password_tip)).setText(getString(R.string.please_enter_password));
+        ((TextView) findViewById(R.id.tv_password_tip)).setText(getString(R.string.please_enter_password));
     }
 
     @Override

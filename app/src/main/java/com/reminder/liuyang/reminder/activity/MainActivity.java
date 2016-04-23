@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         dbUtils = new DBUtils(this);
         mData = dbUtils.query();
-        if(mData == null) {
+        if (mData == null) {
             mData = new ArrayList<>();
         }
         adapter = new MainAdapter(mData, mContext);
@@ -90,7 +90,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         showViewByData();
     }
 
-    private void showViewByData(){
+    private void showViewByData() {
         if (mData.size() == 0) {
             iv_empty.setVisibility(View.VISIBLE);
         } else {

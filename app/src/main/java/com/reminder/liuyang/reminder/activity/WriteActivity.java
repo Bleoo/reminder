@@ -1,8 +1,13 @@
 package com.reminder.liuyang.reminder.activity;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +31,7 @@ public class WriteActivity extends BaseActivity implements View.OnClickListener 
     private EditText et_content;
     private View rl_save;
     private View tv_delete;
+    private Dialog deleteDialog;
 
     private DBUtils dbUtils;
     private Remind remind;
@@ -72,30 +78,10 @@ public class WriteActivity extends BaseActivity implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.rl_save:
-                String content = et_content.getText().toString();
-                if(content.isEmpty()) {
-                    SystemUtils.toggleSoftInput(mContext, et_content, false);
-                    finish();
-                    return;
-                }
-                if(remind == null){
-                    remind = new Remind();
-                }
-                remind.content = content;
-                remind.writeTime = System.currentTimeMillis();
-                if(remind.id == 0) {
-                    dbUtils.save(remind);
-                } else {
-                    dbUtils.update(remind);
-                }
-                setWriteStatus(EDIT_FINISH);
+                save();
                 break;
             case R.id.tv_delete:
-                if(remind != null && remind.id != 0) {
-                    dbUtils.delete(remind);
-                    SystemUtils.toggleSoftInput(mContext, et_content, false);
-                    finish();
-                }
+                showDeleteDialog();
                 break;
             case R.id.tv_back_list:
                 SystemUtils.toggleSoftInput(mContext, et_content, false);
@@ -105,6 +91,34 @@ public class WriteActivity extends BaseActivity implements View.OnClickListener 
                 setWriteStatus(EDITING);
                 break;
         }
+    }
+
+    private void delete() {
+        if(remind != null && remind.id != 0) {
+            dbUtils.delete(remind);
+            SystemUtils.toggleSoftInput(mContext, et_content, false);
+            finish();
+        }
+    }
+
+    private void save() {
+        String content = et_content.getText().toString();
+        if(content.isEmpty()) {
+            SystemUtils.toggleSoftInput(mContext, et_content, false);
+            finish();
+            return;
+        }
+        if(remind == null){
+            remind = new Remind();
+        }
+        remind.content = content;
+        remind.writeTime = System.currentTimeMillis();
+        if(remind.id == 0) {
+            dbUtils.save(remind);
+        } else {
+            dbUtils.update(remind);
+        }
+        setWriteStatus(EDIT_FINISH);
     }
 
     private void setWriteStatus(int writeStatus){
@@ -124,5 +138,32 @@ public class WriteActivity extends BaseActivity implements View.OnClickListener 
                 rl_save.setVisibility(View.INVISIBLE);
                 break;
         }
+    }
+
+    private void showDeleteDialog(){
+        if(deleteDialog == null){
+            deleteDialog= new Dialog(this, R.style.delete_dialog);
+            View view = LayoutInflater.from(this).inflate(R.layout.dialog_confirm_delete, null);
+            deleteDialog.setContentView(view);
+            Window dialogWindow = deleteDialog.getWindow();
+            WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+            DisplayMetrics d = getResources().getDisplayMetrics(); // 获取屏幕宽、高用
+            lp.width = (int) (d.widthPixels * 0.8); // 宽度度设置为屏幕的0.8
+            dialogWindow.setAttributes(lp);
+            view.findViewById(R.id.btn_delete).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    deleteDialog.dismiss();
+                    delete();
+                }
+            });
+            view.findViewById(R.id.btn_cancel).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    deleteDialog.dismiss();
+                }
+            });
+        }
+        deleteDialog.show();
     }
 }

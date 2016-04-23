@@ -1,7 +1,6 @@
 package com.reminder.liuyang.reminder.activity;
 
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -30,7 +29,7 @@ import cn.bmob.v3.listener.SaveListener;
 /**
  * Created by Administrator on 2016/4/8.
  */
-public class CloudServicesActicity extends BaseActivity implements View.OnClickListener{
+public class CloudServicesActicity extends BaseActivity implements View.OnClickListener {
 
     private final int COUNT_CLOUD = 1;
     private final int COUNT_LOCAL = 2;
@@ -69,15 +68,15 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
 
         dbUtils = new DBUtils(this);
 
-        handler = new Handler(){
+        handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
-                switch (msg.what){
+                switch (msg.what) {
                     case COUNT_CLOUD:
-                        tv_cloud_remind_number.setText((int)msg.obj+"");
+                        tv_cloud_remind_number.setText((int) msg.obj + "");
                         break;
                     case COUNT_LOCAL:
-                        tv_local_remind_number.setText((long)msg.obj+"");
+                        tv_local_remind_number.setText((long) msg.obj + "");
                         break;
                     case COUNT_CLOUD_FAIL:
                         tv_cloud_remind_number.setText(getString(R.string.load_fail));
@@ -102,10 +101,10 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
 
     private void showViewByStatus() {
         BmobUser currentUser = BmobUser.getCurrentUser(this);
-        if(currentUser == null){
+        if (currentUser == null) {
             sv_un_sign_in.setVisibility(View.VISIBLE);
             sv_sign_in.setVisibility(View.GONE);
-        }else{
+        } else {
             sv_un_sign_in.setVisibility(View.GONE);
             sv_sign_in.setVisibility(View.VISIBLE);
             tv_phone_number.setText(currentUser.getMobilePhoneNumber());
@@ -124,7 +123,7 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         Intent intent;
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.rl_back:
                 finish();
                 break;
@@ -160,13 +159,13 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
         }
     }
 
-    private void signOut(){
+    private void signOut() {
         BmobUser.logOut(this);   // 清除缓存用户对象
         LeoApplication.getInstance().setEncryptInfo(false, null);  // 关闭加密
         showViewByStatus();
     }
 
-    private void cloudToLocal(){
+    private void cloudToLocal() {
         BmobUser user = BmobUser.getCurrentUser(this);
         BmobQuery<Remind> query = new BmobQuery<>();
         query.addWhereEqualTo("user", user); // 标记所属用户
@@ -195,9 +194,9 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
         });
     }
 
-    private void localToCloud(){
+    private void localToCloud() {
         long localCount = dbUtils.getCount();
-        if(localCount > 0){
+        if (localCount > 0) {
             cloudSelectAll();
         } else {
             SystemUtils.showToast(mContext, getString(R.string.local_no_data));
@@ -207,7 +206,7 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
     /**
      * 查询云端所有该用户的数据
      */
-    private void cloudSelectAll(){
+    private void cloudSelectAll() {
         BmobUser user = BmobUser.getCurrentUser(this);
         BmobQuery<Remind> query = new BmobQuery<>();
         query.addWhereEqualTo("user", user); // 查询该用户所有数据
@@ -227,12 +226,13 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
 
     /**
      * 删除云端所有该用户的数据
+     *
      * @param list
      */
-    private void cloudDeleteAll(List<Remind> list){
-        if(list != null && list.size() > 0){
+    private void cloudDeleteAll(List<Remind> list) {
+        if (list != null && list.size() > 0) {
             List<BmobObject> remindTempData = new ArrayList<>();
-            for(Remind remind : list){
+            for (Remind remind : list) {
                 remindTempData.add(remind);
             }
             new BmobObject().deleteBatch(this, remindTempData, new DeleteListener() {
@@ -240,6 +240,7 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
                 public void onSuccess() {
                     cloudSaveBatch();
                 }
+
                 @Override
                 public void onFailure(int code, String msg) {
                     dialog.dismiss();
@@ -258,8 +259,8 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
         BmobUser user = BmobUser.getCurrentUser(this);
         List<Remind> remindList = dbUtils.query();
         List<BmobObject> remindTempData = new ArrayList<>();
-        if(remindList != null && remindList.size() > 0){
-            for(Remind remind : remindList){
+        if (remindList != null && remindList.size() > 0) {
+            for (Remind remind : remindList) {
                 remind.user = user;
                 remindTempData.add(remind);
             }
@@ -270,6 +271,7 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
                     SystemUtils.showToast(mContext, getString(R.string.sync_success));
                     cloudDataCount();
                 }
+
                 @Override
                 public void onFailure(int code, String msg) {
                     dialog.dismiss();
@@ -281,33 +283,33 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
         }
     }
 
-    private void cloudDataCount(){
+    private void cloudDataCount() {
         BmobUser user = BmobUser.getCurrentUser(this);
         BmobQuery<Remind> query = new BmobQuery<>();
         query.addWhereEqualTo("user", user);
         query.count(this, Remind.class, new CountListener() {
             @Override
             public void onSuccess(int count) {
-                Message.obtain(handler , COUNT_CLOUD, count).sendToTarget();
+                Message.obtain(handler, COUNT_CLOUD, count).sendToTarget();
             }
 
             @Override
             public void onFailure(int code, String msg) {
-                Message.obtain(handler , COUNT_CLOUD_FAIL).sendToTarget();
+                Message.obtain(handler, COUNT_CLOUD_FAIL).sendToTarget();
             }
         });
     }
 
-    private void localDataCount(){
+    private void localDataCount() {
         try {
             Message.obtain(handler, COUNT_LOCAL, dbUtils.getCount()).sendToTarget();
-        } catch (Exception e){
+        } catch (Exception e) {
             Message.obtain(handler, COUNT_LOCAL_FAIL).sendToTarget();
         }
     }
 
-    private void showProgressDialog(){
-        if(dialog == null) {
+    private void showProgressDialog() {
+        if (dialog == null) {
             dialog = new LoadingProgressDialog(mContext, getString(R.string.sync_ing));
         }
         dialog.show();

@@ -2,10 +2,8 @@ package com.reminder.liuyang.reminder;
 
 import android.app.Activity;
 import android.app.Application;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.reminder.liuyang.reminder.utils.Constant;
 
@@ -48,22 +46,22 @@ public class LeoApplication extends Application implements Thread.UncaughtExcept
 
     public void getEncryptInfo() {
         encryptEnable = sharedPreferences.getBoolean(Constant.ENCRYPT_ENABLE, false);
-        if(encryptEnable){
+        if (encryptEnable) {
             encryptPassword = sharedPreferences.getString(Constant.ENCRYPT_PASSWORD, encryptPassword);
         }
     }
 
-    public void setEncryptInfo(boolean enable, String password){
+    public void setEncryptInfo(boolean enable, String password) {
         SharedPreferences.Editor edit = sharedPreferences.edit();
         edit.putBoolean(Constant.ENCRYPT_ENABLE, enable);
-        if(enable){
+        if (enable) {
             edit.putString(Constant.ENCRYPT_PASSWORD, password);
         }
         edit.commit();
         getEncryptInfo();
     }
 
-    private class AppStatusTracker implements ActivityLifecycleCallbacks{
+    private class AppStatusTracker implements ActivityLifecycleCallbacks {
 
         @Override
         public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
@@ -72,7 +70,7 @@ public class LeoApplication extends Application implements Thread.UncaughtExcept
 
         @Override
         public void onActivityStarted(Activity activity) {
-            activityCount ++;
+            activityCount++;
         }
 
         @Override
@@ -87,8 +85,8 @@ public class LeoApplication extends Application implements Thread.UncaughtExcept
 
         @Override
         public void onActivityStopped(Activity activity) {
-            activityCount --;
-            if (activityCount == 0){
+            activityCount--;
+            if (activityCount == 0) {
                 isForegrund = false;
             }
         }

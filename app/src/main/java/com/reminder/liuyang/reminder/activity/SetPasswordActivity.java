@@ -98,7 +98,7 @@ public class SetPasswordActivity extends BaseActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.tv_done:
-                if(checkConfirmPassword()){
+                if (checkConfirmPassword()) {
                     signUp();
                 } else {
                     SystemUtils.showToast(mContext, getString(R.string.password_diff_tip));
@@ -138,7 +138,7 @@ public class SetPasswordActivity extends BaseActivity implements View.OnClickLis
         });
     }
 
-    private void signIn(){
+    private void signIn() {
         String password = et_password.getText().toString();
         BmobUser bu2 = new BmobUser();
         bu2.setUsername(phoneNumber);

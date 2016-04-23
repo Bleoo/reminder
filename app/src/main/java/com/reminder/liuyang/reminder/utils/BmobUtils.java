@@ -9,8 +9,8 @@ import com.reminder.liuyang.reminder.R;
  */
 public class BmobUtils {
 
-    public static String getErrorMsg(int code, Context context){
-        switch (code){
+    public static String getErrorMsg(int code, Context context) {
+        switch (code) {
             case 202:
                 return context.getString(R.string.error_202);
             case 205:

@@ -23,7 +23,7 @@ public class BaseActivity extends Activity {
     @Override
     protected void onResume() {
         LeoApplication.getInstance().getEncryptInfo();
-        if(!LeoApplication.getInstance().isForegrund && LeoApplication.getInstance().encryptEnable){
+        if (!LeoApplication.getInstance().isForegrund && LeoApplication.getInstance().encryptEnable) {
             Intent intent = new Intent(this, DecryptPasswordActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);

@@ -37,7 +37,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
 
     private void setUsernameText() {
         BmobUser currentUser = BmobUser.getCurrentUser(this);
-        if(currentUser != null){
+        if (currentUser != null) {
             tv_username.setText(currentUser.getMobilePhoneNumber());
         } else {
             tv_username.setText("");
@@ -47,7 +47,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         Intent intent;
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.rl_cloud_services:
                 intent = new Intent(this, CloudServicesActicity.class);
                 startActivity(intent);

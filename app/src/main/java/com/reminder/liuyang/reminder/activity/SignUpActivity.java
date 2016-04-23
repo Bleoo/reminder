@@ -81,7 +81,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(checkPhoneSMSCode()){
+                if (checkPhoneSMSCode()) {
                     tv_get_smscode.setVisibility(View.GONE);
                     tv_next.setVisibility(View.VISIBLE);
                     setNextBtnClickable(checkPhoneNumber());
@@ -166,7 +166,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
         tv_smscode_tip.setVisibility(View.VISIBLE);
     }
 
-    private void sendSMSCode(){
+    private void sendSMSCode() {
         BmobSMS.requestSMSCode(this, et_phone_number.getText().toString(), TEMPLATE_SIGN_UP, new RequestSMSCodeListener() {
 
             @Override
@@ -180,18 +180,18 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
         });
     }
 
-    private void verifySmsCode(){
+    private void verifySmsCode() {
         final String phoneNumber = et_phone_number.getText().toString();
         BmobSMS.verifySmsCode(this, phoneNumber, et_phone_smscode.getText().toString(), new VerifySMSCodeListener() {
 
             @Override
             public void done(BmobException ex) {
-                if(ex==null){//短信验证码已验证成功
+                if (ex == null) {//短信验证码已验证成功
                     Intent intent = new Intent(mContext, SetPasswordActivity.class);
                     intent.putExtra("phone_number", phoneNumber);
                     startActivity(intent);
                     finish();
-                }else{
+                } else {
                     SystemUtils.showToast(mContext, "验证码错误");
                 }
             }

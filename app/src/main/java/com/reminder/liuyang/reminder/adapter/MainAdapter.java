@@ -21,7 +21,7 @@ public class MainAdapter extends BaseAdapter {
     private List<Remind> mDatas;
     private LayoutInflater mInflater;
 
-    public MainAdapter(List<Remind> datas, Context context){
+    public MainAdapter(List<Remind> datas, Context context) {
         mDatas = datas;
         mInflater = LayoutInflater.from(context);
     }
@@ -44,7 +44,7 @@ public class MainAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-        if(convertView == null){
+        if (convertView == null) {
             holder = new ViewHolder();
             convertView = mInflater.inflate(R.layout.item_main, null);
             holder.tv_item_time = (TextView) convertView.findViewById(R.id.tv_item_time);
@@ -57,7 +57,7 @@ public class MainAdapter extends BaseAdapter {
         holder.tv_item_time.setText(SystemUtils.formatTime(mDatas.get(position).writeTime));
         String describe = mDatas.get(position).content;
         int enterIndex = describe.indexOf('\n');
-        if(enterIndex != -1) {
+        if (enterIndex != -1) {
             describe = describe.substring(0, enterIndex);
         }
         holder.tv_item_describe.setText(describe);
@@ -65,7 +65,7 @@ public class MainAdapter extends BaseAdapter {
         return convertView;
     }
 
-    private class ViewHolder{
+    private class ViewHolder {
         TextView tv_item_time, tv_item_describe;
     }
 }

@@ -32,7 +32,7 @@
                 android:layout_centerInParent="true"
                 android:text="@string/BMUpdateTitle"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#63C2FF" />
+                android:textColor="@color/royal_blue" />
             
             <Button
                 android:id="@+id/bmob_update_id_close"
@@ -54,7 +54,7 @@
             android:layout_height="2dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="#2AACFF" />
+            android:background="@color/royal_blue" />
         <!-- Content -->
 
         <ScrollView
@@ -103,9 +103,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/bmob_update_button_ok_bg_selector"
+                android:background="@drawable/selector_common_blue_btn"
                 android:gravity="center"
-                android:padding="12dp"
                 android:text="@string/BMUpdateNow"
 				android:focusable="true"
                 android:textColor="#FFFFFF" />
@@ -116,12 +115,11 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/bmob_update_button_cancel_bg_selector"
+                android:background="@drawable/selector_common_btn_red"
                 android:gravity="center"
-                android:padding="12dp"
                 android:text="@string/BMNotNow"
 				android:focusable="true"
-                android:textColor="#AAABAF" />
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/bmob_update_id_ignore"
@@ -130,12 +128,11 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/bmob_update_button_cancel_bg_selector"
+                android:background="@drawable/selector_common_btn_red"
                 android:gravity="center"
-                android:padding="12dp"
                 android:text="@string/BMIgnore"
 				android:focusable="true"
-                android:textColor="#AAABAF" />
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </LinearLayout>
 
