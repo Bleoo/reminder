@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/list_item_bg">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_item_time"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/light_khaki"
-        android:singleLine="true"
-        android:textSize="14sp"/>
+        android:orientation="vertical"
+        android:background="@drawable/list_item_bg">
 
-    <TextView
-        android:id="@+id/tv_item_describe"
-        android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_item_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/light_khaki"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_item_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:singleLine="true"
+            android:textColor="@color/khaki"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8sp"
-        android:singleLine="true"
-        android:textSize="18sp"
-        android:textColor="@color/khaki"/>
-
-</LinearLayout>
+        android:src="@drawable/note_item_clip_normal"/>
+</FrameLayout>

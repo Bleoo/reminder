@@ -14,6 +14,7 @@ import com.reminder.liuyang.reminder.R;
 import com.reminder.liuyang.reminder.adapter.MainAdapter;
 import com.reminder.liuyang.reminder.bean.Remind;
 import com.reminder.liuyang.reminder.utils.DBUtils;
+import com.reminder.liuyang.reminder.view.DeleteDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private SwipeMenuListView smlv_main;
     private View iv_empty;
+    private DeleteDialog deleteDialog;
 
     private List<Remind> mData;
     private MainAdapter adapter;
@@ -65,11 +67,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
                 switch (index) {
                     case 0:
-                        if (dbUtils.delete(mData.get(position)) > 0) {
-                            mData.remove(position);
-                            adapter.notifyDataSetChanged();
-                            showViewByData();
-                        }
+                        showDeleteDialog(position);
                         break;
                 }
                 // false : close the menu; true : not close the menu
@@ -88,6 +86,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         });
 
         showViewByData();
+    }
+
+    private void delete(int position) {
+        if (dbUtils.delete(mData.get(position)) > 0) {
+            mData.remove(position);
+            adapter.notifyDataSetChanged();
+            showViewByData();
+        }
     }
 
     private void showViewByData() {
@@ -120,5 +126,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mData.addAll(dbUtils.query());
         adapter.notifyDataSetChanged();
         showViewByData();
+    }
+
+    private void showDeleteDialog(final int position) {
+        if (deleteDialog == null) {
+            deleteDialog = new DeleteDialog(this);
+        }
+        deleteDialog.setDeleteClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteDialog.dismiss();
+                delete(position);
+            }
+        });
+        deleteDialog.show();
     }
 }

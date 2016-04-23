@@ -44,7 +44,7 @@ public class LoadingProgressDialog extends Dialog {
         iv_loadImage.startAnimation(rotateAnimation);
     }
 
-    public void setMessage(String message){
+    public void setMessage(String message) {
         tv_message.setText(message);
     }
 
