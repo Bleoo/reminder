@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.reminder.liuyang.reminder.LeoApplication;
 import com.reminder.liuyang.reminder.R;
 import com.reminder.liuyang.reminder.utils.SystemUtils;
+import com.reminder.liuyang.reminder.view.CheckPasswordDialog;
 import com.reminder.liuyang.reminder.view.EncryptPasswordView;
 
 /**
@@ -17,6 +19,8 @@ import com.reminder.liuyang.reminder.view.EncryptPasswordView;
 public class DecryptPasswordActivity extends Activity implements View.OnClickListener {
 
     private EncryptPasswordView passwordView;
+    private Button btn_forget_password;
+    private CheckPasswordDialog checkPasswordDialog;
 
     private String currentPassword = "";
 
@@ -26,6 +30,7 @@ public class DecryptPasswordActivity extends Activity implements View.OnClickLis
         setContentView(R.layout.activity_encrypt_password);
 
         passwordView = (EncryptPasswordView) findViewById(R.id.view_password);
+        btn_forget_password = (Button) findViewById(R.id.btn_forget_password);
 
         findViewById(R.id.rl_back).setOnClickListener(this);
         findViewById(R.id.btn_1).setOnClickListener(this);
@@ -39,9 +44,11 @@ public class DecryptPasswordActivity extends Activity implements View.OnClickLis
         findViewById(R.id.btn_9).setOnClickListener(this);
         findViewById(R.id.btn_0).setOnClickListener(this);
         findViewById(R.id.btn_del).setOnClickListener(this);
+        btn_forget_password.setOnClickListener(this);
 
         findViewById(R.id.rl_title_bar).setVisibility(View.GONE);
         ((TextView) findViewById(R.id.tv_password_tip)).setText(getString(R.string.please_enter_password));
+        btn_forget_password.setText(getString(R.string.forget_password));
     }
 
     @Override
@@ -61,6 +68,9 @@ public class DecryptPasswordActivity extends Activity implements View.OnClickLis
                 break;
             case R.id.btn_del:
                 backspace();
+                break;
+            case R.id.btn_forget_password:
+                showCheckPasswordDialog();
                 break;
         }
     }
@@ -83,6 +93,21 @@ public class DecryptPasswordActivity extends Activity implements View.OnClickLis
         if (currentPassword.length() > 0) {
             currentPassword = currentPassword.substring(0, currentPassword.length() - 1);
             passwordView.refreshViewByLength(currentPassword.length());
+        }
+    }
+
+    private void showCheckPasswordDialog() {
+        if (checkPasswordDialog == null) {
+            checkPasswordDialog = new CheckPasswordDialog(this);
+        }
+        checkPasswordDialog.show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (checkPasswordDialog != null) {
+            checkPasswordDialog.dismiss();
         }
     }
 

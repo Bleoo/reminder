@@ -110,10 +110,10 @@ public class CloudServicesActicity extends BaseActivity implements View.OnClickL
             tv_phone_number.setText(currentUser.getMobilePhoneNumber());
             tv_cloud_remind_number.setText(getString(R.string.loading));
             tv_local_remind_number.setText(getString(R.string.loading));
+            cloudDataCount();
             new Thread() {
                 @Override
                 public void run() {
-                    cloudDataCount();
                     localDataCount();
                 }
             }.start();

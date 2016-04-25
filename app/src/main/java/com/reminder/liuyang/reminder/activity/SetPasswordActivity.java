@@ -1,6 +1,7 @@
 package com.reminder.liuyang.reminder.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.reminder.liuyang.reminder.R;
+import com.reminder.liuyang.reminder.utils.Constant;
 import com.reminder.liuyang.reminder.utils.SystemUtils;
 
 import cn.bmob.v3.BmobUser;
@@ -139,13 +141,15 @@ public class SetPasswordActivity extends BaseActivity implements View.OnClickLis
     }
 
     private void signIn() {
-        String password = et_password.getText().toString();
+        final String password = et_password.getText().toString();
+        final String passwordMD5 = SystemUtils.getPasswordMD5(password);
         BmobUser bu2 = new BmobUser();
         bu2.setUsername(phoneNumber);
-        bu2.setPassword(SystemUtils.getPasswordMD5(password));
+        bu2.setPassword(passwordMD5);
         bu2.login(this, new SaveListener() {
             @Override
             public void onSuccess() {
+                savePassword(passwordMD5);
                 Intent intent = new Intent(mContext, CloudServicesActicity.class);
                 startActivity(intent);
             }
@@ -156,5 +160,12 @@ public class SetPasswordActivity extends BaseActivity implements View.OnClickLis
                 startActivity(intent);
             }
         });
+    }
+
+    private void savePassword(String passwordMD5) {
+        SharedPreferences sharedPreferences = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(Constant.SP_PASSWORD, passwordMD5);
+        editor.apply();
     }
 }

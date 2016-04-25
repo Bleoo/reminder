@@ -18,7 +18,7 @@ public class DeleteDialog extends Dialog {
     private Button btn_delete;
 
     public DeleteDialog(Context context) {
-        this(context, R.style.delete_dialog);
+        this(context, R.style.common_dialog);
     }
 
     public DeleteDialog(Context context, int theme) {

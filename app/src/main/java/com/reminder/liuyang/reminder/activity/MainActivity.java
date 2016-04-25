@@ -3,6 +3,8 @@ package com.reminder.liuyang.reminder.activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -21,13 +23,16 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
+    private static final int REFRESH_LIST = 1;
+
     private SwipeMenuListView smlv_main;
     private View iv_empty;
     private DeleteDialog deleteDialog;
 
-    private List<Remind> mData;
+    private List<Remind> mData = new ArrayList<>();
     private MainAdapter adapter;
     private DBUtils dbUtils;
+    private Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +45,35 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.rl_setting).setOnClickListener(this);
         findViewById(R.id.rl_writing).setOnClickListener(this);
 
-        dbUtils = new DBUtils(this);
-        mData = dbUtils.query();
-        if (mData == null) {
-            mData = new ArrayList<>();
-        }
         adapter = new MainAdapter(mData, mContext);
         smlv_main.setAdapter(adapter);
+        initSwipeMenuListView();
 
+        handler = new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+                switch (msg.what){
+                    case REFRESH_LIST:
+                        adapter.notifyDataSetChanged();
+                        showViewByData();
+                        break;
+                }
+            }
+        };
+
+        dbUtils = new DBUtils(this);
+
+        new Thread(){
+            @Override
+            public void run() {
+                mData.clear();
+                mData.addAll(dbUtils.query());
+                Message.obtain(handler, REFRESH_LIST).sendToTarget();
+            }
+        }.start();
+    }
+
+    private void initSwipeMenuListView() {
         SwipeMenuCreator creator = new SwipeMenuCreator() {
 
             @Override
@@ -84,15 +110,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(intent);
             }
         });
-
-        showViewByData();
     }
 
     private void delete(int position) {
         if (dbUtils.delete(mData.get(position)) > 0) {
             mData.remove(position);
-            adapter.notifyDataSetChanged();
-            showViewByData();
+            Message.obtain(handler, REFRESH_LIST).sendToTarget();
         }
     }
 
@@ -124,8 +147,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onResume();
         mData.clear();
         mData.addAll(dbUtils.query());
-        adapter.notifyDataSetChanged();
-        showViewByData();
+        Message.obtain(handler, REFRESH_LIST).sendToTarget();
     }
 
     private void showDeleteDialog(final int position) {

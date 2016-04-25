@@ -10,4 +10,5 @@ public class Constant {
     public static final String ENCRYPT_ENABLE = "ENCRYPT_ENABLE";
     public static final String ENCRYPT_PASSWORD = "ENCRYPT_PASSWORD";
     public static final String APP_AUTHOR = "LeoLiu";
+    public static final String SP_PASSWORD = "SP_PASSWORD";
 }
