@@ -54,6 +54,7 @@
     <string name="delete">删除</string>
     <string name="forget_password">忘记密码</string>
     <string name="current_account">当前账户</string>
+    <string name="search_keys">快速搜索关键字</string>
 
     <string name="cloud_services_tip">登录云服务，您可以将便签的数据与云服务同步。</string>
     <string name="smscode_tip">已经向您的手机发送了验证码，如果您没有收到，可以在一分钟之后点击重新发送手机验证码。</string>

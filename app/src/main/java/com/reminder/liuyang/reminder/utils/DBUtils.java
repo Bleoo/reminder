@@ -103,6 +103,24 @@ public class DBUtils {
         return remindList;
     }
 
+    public List<Remind> search(String searchText) {
+        SQLiteDatabase database = dbHelper.getWritableDatabase();
+        Cursor cursor = database.query(TB_REMAINDER, null, COL_CONTENT + " like '%" + searchText + "%'", null, null, null, COL_ID + " desc");
+        List<Remind> searchList = null;
+        if (cursor != null) {
+            searchList = new ArrayList<>();
+            Remind remind;
+            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+                remind = new Remind();
+                remind.id = cursor.getInt(cursor.getColumnIndex(COL_ID));
+                remind.content = cursor.getString(cursor.getColumnIndex(COL_CONTENT));
+                remind.writeTime = cursor.getLong(cursor.getColumnIndex(COL_WRITETIME));
+                searchList.add(remind);
+            }
+        }
+        return searchList;
+    }
+
     public long getCount() {
         SQLiteDatabase database = dbHelper.getWritableDatabase();
         Cursor cursor = database.rawQuery("select count(*) from " + TB_REMAINDER + ";", null);

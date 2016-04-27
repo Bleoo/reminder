@@ -98,7 +98,19 @@ public class DecryptPasswordActivity extends Activity implements View.OnClickLis
 
     private void showCheckPasswordDialog() {
         if (checkPasswordDialog == null) {
-            checkPasswordDialog = new CheckPasswordDialog(this);
+            checkPasswordDialog = new CheckPasswordDialog(this, new CheckPasswordDialog.EqualsListener() {
+                @Override
+                public void equalsTure() {
+                    checkPasswordDialog.dismiss();
+                    LeoApplication.getInstance().setEncryptInfo(false, null);
+                    finish();
+                }
+
+                @Override
+                public void equalsFalse() {
+                    SystemUtils.showToast(DecryptPasswordActivity.this, getString(R.string.password_error));
+                }
+            });
         }
         checkPasswordDialog.show();
     }

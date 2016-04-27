@@ -28,7 +28,7 @@
         <TextView
             android:id="@+id/tv_title"
             style="@style/title_bar_title"
-            android:text="@string/reminder"></TextView>
+            android:text="@string/reminder" />
 
         <RelativeLayout
             android:id="@+id/rl_writing"
@@ -56,11 +56,53 @@
             android:layout_height="match_parent"
             android:src="@drawable/note_empty" />
 
-        <com.baoyz.swipemenulistview.SwipeMenuListView
-            android:id="@+id/smlv_main"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:listSelector="@android:color/transparent" />
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/selector_list_search_edit"
+                    android:hint="@string/search_keys"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textColor="@color/khaki"
+                    android:textColorHint="@color/light_khaki"
+                    android:textCursorDrawable="@drawable/shape_edit_text_cursor"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_search_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/selector_list_search_clear"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:id="@+id/smlv_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent" />
+
+        </LinearLayout>
 
     </FrameLayout>
 

@@ -28,6 +28,7 @@ public class WriteActivity extends BaseActivity implements View.OnClickListener 
 
     private DBUtils dbUtils;
     private Remind remind;
+    private String searchText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,12 @@ public class WriteActivity extends BaseActivity implements View.OnClickListener 
         if (getIntent().hasExtra("remind")) {
             remind = (Remind) getIntent().getSerializableExtra("remind");
             tv_write_time.setText(SystemUtils.formatTime(remind.writeTime));
-            et_content.setText(remind.content);
+            if (getIntent().hasExtra("searchText")) {
+                searchText = getIntent().getStringExtra("searchText");
+                et_content.setText(SystemUtils.getStyleText(remind.content, searchText));
+            } else {
+                et_content.setText(remind.content);
+            }
             setWriteStatus(EDIT_FINISH);
         } else {
             tv_write_time.setText(SystemUtils.formatTime(System.currentTimeMillis()));

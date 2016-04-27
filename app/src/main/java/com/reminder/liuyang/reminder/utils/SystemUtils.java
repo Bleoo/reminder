@@ -2,6 +2,8 @@ package com.reminder.liuyang.reminder.utils;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +11,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -17,12 +20,20 @@ import android.os.CountDownTimer;
 import android.os.Parcelable;
 import android.os.PowerManager;
 import android.os.Vibrator;
+import android.support.v4.app.NotificationCompat;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
 import android.view.Display;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import com.reminder.liuyang.reminder.R;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -33,6 +44,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
 /**
  * Created by albert on 8/8/14.
@@ -68,76 +80,22 @@ public class SystemUtils {
         return dateFormat.format(date);
     }
 
-//    /**
-//     * 显示顶部dialog
-//     */
-//    public static Inner_RefreshDialog inner_refreshDialog;
-//
-//    public static Inner_RefreshDialog showInnerDialog(final Context context, String message, int showStatus) {
-//
-//        if (inner_refreshDialog == null) {
-//            inner_refreshDialog = new Inner_RefreshDialog(context);
-//            inner_refreshDialog.show(context, message);
-//        }
-//
-//        if (!inner_refreshDialog.isShowing()) {
-//            inner_refreshDialog.show(context, message);
-//        }
-//
-//        switch (showStatus) {
-//            case 0:
-//                inner_refreshDialog.setStatus(Inner_RefreshDialog.LOADING, message);
-//                break;
-//            case 1:
-//                inner_refreshDialog.setStatus(Inner_RefreshDialog.LOADINGFAIL, message);
-//                break;
-//            case 2:
-//                inner_refreshDialog.setStatus(Inner_RefreshDialog.LOADINGSUCCESS, message);
-//                break;
-//        }
-//
-//        return inner_refreshDialog;
-//    }
-//
-//    static WindProgressDialog progressDialog;
+    public static void showNotification(Context context, String title, String content, PendingIntent pendingIntent) {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
+        builder.setSmallIcon(R.drawable.notes_launcher);
+        builder.setContentTitle(title);
+        builder.setContentText(content);
+        builder.setOngoing(false);
+        builder.setAutoCancel(true);
+        if (pendingIntent != null) {
+            builder.setContentIntent(pendingIntent);
+        }
 
-//    /**
-//     * 显示dialog
-//     *
-//     * @param context
-//     * @param message
-//     * @param
-//     */
-//
-//    public static void showDialog(Context context, String message, boolean showStatus) {
-//
-//        if (showStatus) {
-//            progressDialog = WindProgressDialog.show(context, message, true, null);
-//            progressDialog.show();
-//        } else {
-//            if (progressDialog != null && progressDialog.isShowing()) {
-//                progressDialog.dismiss();
-//            }
-//        }
-//    }
-
-//
-//    public static void showNotification(Context context, String title, String content, PendingIntent pendingIntent) {
-//        NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
-//        builder.setSmallIcon(R.drawable.notification_icon);
-//        builder.setContentTitle(title);
-//        builder.setContentText(content);
-//        builder.setOngoing(false);
-//        builder.setAutoCancel(true);
-//        if (pendingIntent != null) {
-//            builder.setContentIntent(pendingIntent);
-//        }
-//
-//        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-//        Random random = new Random();
-//        int notifyId = random.nextInt();
-//        notificationManager.notify(notifyId, builder.build());
-//    }
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        Random random = new Random();
+        int notifyId = random.nextInt();
+        notificationManager.notify(notifyId, builder.build());
+    }
 
     /**
      * 检查是否存在相应的Intent
@@ -436,6 +394,34 @@ public class SystemUtils {
 
     public static String getPasswordMD5(String password) {
         return getMD5(getMD5(password) + Constant.APP_AUTHOR);
+    }
+
+    public static void setListViewHeight(ListView listView) {
+        int listViewHeight = 0;
+        int adaptCount = listView.getCount();
+        for (int i = 0; i < adaptCount; i++) {
+            View temp = listView.getAdapter().getView(i, null, listView);
+            temp.measure(0, 0);
+            listViewHeight += temp.getMeasuredHeight();
+        }
+        ViewGroup.LayoutParams layoutParams = listView.getLayoutParams();
+        layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        layoutParams.height = listViewHeight;
+        listView.setLayoutParams(layoutParams);
+    }
+
+
+    public static SpannableStringBuilder getStyleText(String sourceText, String matchText) {
+        SpannableStringBuilder style = new SpannableStringBuilder(sourceText);
+        int length = sourceText.length();
+        int index = -1;
+        for (int i = 0; i < length; i++) {
+            index = sourceText.indexOf(matchText, index + 1);
+            if (index != -1) {
+                style.setSpan(new ForegroundColorSpan(Color.RED), index, index + matchText.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+        }
+        return style;
     }
 
 }

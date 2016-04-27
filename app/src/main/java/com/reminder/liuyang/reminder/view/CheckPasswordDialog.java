@@ -13,9 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.reminder.liuyang.reminder.LeoApplication;
 import com.reminder.liuyang.reminder.R;
-import com.reminder.liuyang.reminder.activity.DecryptPasswordActivity;
 import com.reminder.liuyang.reminder.utils.Constant;
 import com.reminder.liuyang.reminder.utils.SystemUtils;
 
@@ -30,14 +28,17 @@ public class CheckPasswordDialog extends Dialog {
     private EditText et_password;
     private Button btn_done;
 
-    public CheckPasswordDialog(Context context) {
-        this(context, R.style.common_dialog);
+    private EqualsListener equalsListener;
+
+    public CheckPasswordDialog(Context context, EqualsListener equalsListener) {
+        this(context, R.style.common_dialog, equalsListener);
     }
 
-    public CheckPasswordDialog(final Context context, int theme) {
+    public CheckPasswordDialog(final Context context, int theme, final EqualsListener equalsListener) {
         super(context, theme);
         setContentView(R.layout.dialog_check_password);
         setCanceledOnTouchOutside(true);
+        this.equalsListener = equalsListener;
 
         Window dialogWindow = getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
@@ -78,11 +79,9 @@ public class CheckPasswordDialog extends Dialog {
                 String passwordMD5 = sharedPreferences.getString(Constant.SP_PASSWORD, "");
                 String password = et_password.getText().toString();
                 if (passwordMD5.equals(SystemUtils.getPasswordMD5(password))) {
-                    dismiss();
-                    LeoApplication.getInstance().setEncryptInfo(false, null);
-                    ((DecryptPasswordActivity) context).finish();
+                    equalsListener.equalsTure();
                 } else {
-                    SystemUtils.showToast(context, context.getString(R.string.password_error));
+                    equalsListener.equalsFalse();
                 }
             }
         });
@@ -93,6 +92,11 @@ public class CheckPasswordDialog extends Dialog {
     private void setDoneBtnClickable(boolean clickable) {
         btn_done.setClickable(clickable);
         btn_done.setAlpha(clickable ? 1 : 0.5f);
+    }
+
+    public interface EqualsListener {
+        void equalsTure();
+        void equalsFalse();
     }
 
 }

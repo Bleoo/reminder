@@ -2,11 +2,13 @@ package com.reminder.liuyang.reminder.activity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.reminder.liuyang.reminder.LeoApplication;
 import com.reminder.liuyang.reminder.R;
 import com.reminder.liuyang.reminder.utils.SystemUtils;
+import com.reminder.liuyang.reminder.view.CheckPasswordDialog;
 import com.reminder.liuyang.reminder.view.EncryptPasswordView;
 
 /**
@@ -25,6 +27,8 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
     private TextView tv_title;
     private TextView tv_password_tip;
     private EncryptPasswordView passwordView;
+    private Button btn_forget_password;
+    private CheckPasswordDialog checkPasswordDialog;
 
     private String newPassword = "";
     private String confirmPassword = "";
@@ -40,6 +44,7 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
         tv_title = (TextView) findViewById(R.id.tv_title);
         tv_password_tip = (TextView) findViewById(R.id.tv_password_tip);
         passwordView = (EncryptPasswordView) findViewById(R.id.view_password);
+        btn_forget_password = (Button) findViewById(R.id.btn_forget_password);
 
         findViewById(R.id.rl_back).setOnClickListener(this);
         findViewById(R.id.btn_1).setOnClickListener(this);
@@ -63,8 +68,10 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
                 tv_password_tip.setText(getString(R.string.set_password));
                 editingStatus = EDITING_NEW_PASSWORD;
                 break;
-            case CHANGE_PASSWORD:
             case DISABLE_PASSWORD:
+                btn_forget_password.setText(getString(R.string.forget_password));
+                btn_forget_password.setOnClickListener(this);
+            case CHANGE_PASSWORD:
                 tv_title.setText(getString(R.string.input_current_password));
                 tv_password_tip.setText(getString(R.string.current_password));
                 editingStatus = EDITING_CURRENT_PASSWORD;
@@ -92,6 +99,9 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
                 break;
             case R.id.rl_back:
                 finish();
+                break;
+            case R.id.btn_forget_password:
+                showCheckPasswordDialog();
                 break;
         }
     }
@@ -175,6 +185,25 @@ public class EncryptPasswordActivity extends BaseActivity implements View.OnClic
                 }
                 break;
         }
+    }
+
+    private void showCheckPasswordDialog() {
+        if (checkPasswordDialog == null) {
+            checkPasswordDialog = new CheckPasswordDialog(this, new CheckPasswordDialog.EqualsListener() {
+                @Override
+                public void equalsTure() {
+                    checkPasswordDialog.dismiss();
+                    LeoApplication.getInstance().setEncryptInfo(false, null);
+                    finish();
+                }
+
+                @Override
+                public void equalsFalse() {
+                    SystemUtils.showToast(EncryptPasswordActivity.this, getString(R.string.password_error));
+                }
+            });
+        }
+        checkPasswordDialog.show();
     }
 
 }

@@ -20,6 +20,8 @@ public class MainAdapter extends BaseAdapter {
 
     private List<Remind> mDatas;
     private LayoutInflater mInflater;
+    private boolean isSearching;
+    private String searchText;
 
     public MainAdapter(List<Remind> datas, Context context) {
         mDatas = datas;
@@ -54,13 +56,24 @@ public class MainAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.tv_item_time.setText(SystemUtils.formatTime(mDatas.get(position).writeTime));
-        String describe = mDatas.get(position).content;
+        Remind remind = mDatas.get(position);
+        holder.tv_item_time.setText(SystemUtils.formatTime(remind.writeTime));
+        String describe = remind.content;
         int enterIndex = describe.indexOf('\n');
         if (enterIndex != -1) {
             describe = describe.substring(0, enterIndex);
         }
-        holder.tv_item_describe.setText(describe);
+
+        if (isSearching) {
+            int index = describe.indexOf(searchText);
+            if (index != -1) {
+                holder.tv_item_describe.setText(SystemUtils.getStyleText(describe, searchText));
+            } else {
+                holder.tv_item_describe.setText(describe);
+            }
+        } else {
+            holder.tv_item_describe.setText(describe);
+        }
 
         return convertView;
     }
@@ -68,4 +81,10 @@ public class MainAdapter extends BaseAdapter {
     private class ViewHolder {
         TextView tv_item_time, tv_item_describe;
     }
+
+    public void isSearching(boolean isSearching, String searchText) {
+        this.isSearching = isSearching;
+        this.searchText = searchText;
+    }
+
 }
